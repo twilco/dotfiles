@@ -93,11 +93,12 @@ alias gca='git commit -am'
 ### use hub wrapper over git commands
 alias git='hub'
 
-# GIT ALIASES
+# DOCKER ALIASES
 # --------------------------------
 alias dcd='docker-compose down'
 alias dcu='docker-compose up -d'
 alias dcp='docker-compose pull'
+alias dcrs='dcd && dcp; dcu'
 
 ### colored man pages
 man() {
