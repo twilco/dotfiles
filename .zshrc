@@ -112,7 +112,6 @@ man() {
     man "$@"
 }
 
-
 setopt prompt_subst
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' actionformats \
@@ -120,10 +119,8 @@ zstyle ':vcs_info:*' actionformats \
 zstyle ':vcs_info:*' formats       \
 	    '%F{magenta}%f%s %F{white}%b%F{magenta}%f '
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{red}:%F{yellow}%r'
-
 zstyle ':vcs_info:*' enable git cvs svn
 
-# or use pre_cmd, see man zshcontrib
 vcs_info_wrapper() {
     vcs_info
         if [ -n "$vcs_info_msg_0_" ]; then
@@ -158,8 +155,3 @@ RPROMPT=''
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
