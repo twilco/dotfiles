@@ -1,0 +1,48 @@
+{
+	"describe": {
+		"prefix": "udes",
+		"body": [
+			"describe('$1', function() {",
+			"  it('should $2', function() {",
+			"      $3",
+			"  });",
+			"});"
+		],
+		"description": "Describe for unit tests"
+	},
+	"it": {
+		"prefix": "uit",
+		"body": [
+			"it('should $1', function() {",
+			"  $2",
+			"});"
+		],
+		"description": "It for unit tests"
+	},
+	"beforeEach": {
+		"prefix": "ubef",
+		"body": [
+			"beforeEach(function() { $1 });"
+		],
+		"description": "beforeEach for unit tests"
+	},
+	"console.log": {
+		"prefix": "ucon",
+		"body": [
+			"console.log($1);"
+		],
+		"description": "console.log"
+	},
+	"React component unit test": {
+		"prefix": "comptest",
+		"body": [
+			"import React from 'react';",
+			"import {shallow} from 'enzyme';",
+			"import OverlaySpinner from './OverlaySpinner';",
+			"",
+			"describe('<OverlaySpinner />', () =>{",
+			"  $1",
+			"});"
+		]
+	}
+}
