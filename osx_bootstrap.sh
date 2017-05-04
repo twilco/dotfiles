@@ -166,6 +166,10 @@ echo "Hard linking ./zshrc to ~/.zshrc"
 link ~/.zshrc .zshrc
 
 echo ""
+echo "Hard linking ./zshenv to ~/.zshenv"
+link ~/.zshenv .zshenv
+
+echo ""
 echo "Hard linking ./vscode/extensions.json to ~/.vscode/extensions.json"
 link ~/.vscode/extensions.json vscode/extensions.json
 
