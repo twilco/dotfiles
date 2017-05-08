@@ -86,6 +86,8 @@ NEWLINE=$'\n'
 PROMPT='%F{green}${NEWLINE}%D{%r} %f%F{yellow}%n $(vcs_info_wrapper)%f%F{magenta}${NEWLINE}%~ %f%F{green}${NEWLINE}$%f '
 RPROMPT=''
 
+source ~/.zshenv
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

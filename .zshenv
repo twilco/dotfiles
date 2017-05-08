@@ -1,4 +1,3 @@
-source ~/.zshrc
 # ls ALIASES
 # --------------------------------
 ### Colorize the ls output
@@ -25,16 +24,6 @@ alias .4='cd ../../../../'
 
 # GIT ALIASES
 # --------------------------------
-alias gs='git status'
-alias gp='git push'
-alias gpu='git pull'
-alias gcl='git clone'
-alias gb='git branch'
-alias gd='git diff'
-alias gc='git commit -m'
-alias ga='git add -A'
-### git commit all unstaged files with a message 
-alias gca='git commit -am'
 ### use hub wrapper over git commands
 alias git='hub'
 
