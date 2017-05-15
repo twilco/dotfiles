@@ -1,0 +1,10 @@
+{
+    "http.proxyStrictSSL": false,
+    "vsicons.projectDetection.autoReload": true,
+    "editor.dragAndDrop": true,
+    "editor.minimap.enabled": true,
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.tabSize": 2,
+    "editor.cursorBlinking": "phase",
+    "editor.renderWhitespace": "all"
+}

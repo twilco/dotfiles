@@ -174,6 +174,10 @@ echo "Hard linking ./vscode/extensions.json to ~/.vscode/extensions.json"
 link ~/.vscode/extensions.json vscode/extensions.json
 
 echo ""
+echo "Hard linking ./vscode/settings.json to ~/Library/Application Support/Code/User/settings.json"
+link ~/Library/Application Support/Code/User/settings.json vscode/settings.json
+
+echo ""
 echo "Hard linking ./htoprc to ~/.config/htop/htoprc"
 link ~/.config/htop/htoprc htoprc
 
