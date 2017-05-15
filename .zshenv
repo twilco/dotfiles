@@ -33,3 +33,7 @@ alias dcd='docker-compose down'
 alias dcu='docker-compose up -d'
 alias dcp='docker-compose pull'
 alias dcrs='dcd && dcp; dcu'
+
+# ANSIBLE ALIASES
+# --------------------------------
+alias ag='ansible-galaxy -r install roles/requirements.yml --force'
