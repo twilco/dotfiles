@@ -18,16 +18,14 @@ brew update
 
 echo ""
 echo "Installing GNU core utilities (those that come with OS X are outdated)"
-brew tap homebrew/dupes
 brew install coreutils
 brew install gnu-sed --with-default-names
 brew install gnu-tar --with-default-names
 brew install gnu-indent --with-default-names
 brew install gnu-which --with-default-names
-brew install gnu-grep --with-default-names
 
 echo ""
-echo "Installing GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed"
+echo "Installing GNU find, locate, updatedb, and xargs, g-prefixed"
 brew install findutils
 
 echo ""
@@ -106,7 +104,7 @@ echo ""
 echo "Installing fonts..."
 brew tap caskroom/fonts
 FONTS=(
-    font-inconsolidata
+    font-inconsolata
     font-roboto
     font-clear-sans
 )
@@ -163,27 +161,27 @@ echo ""
 
 echo ""
 echo "Hard linking ./zshrc to ~/.zshrc"
-link ~/.zshrc .zshrc
+ln -F ~/.zshrc .zshrc
 
 echo ""
 echo "Hard linking ./zshenv to ~/.zshenv"
-link ~/.zshenv .zshenv
+ln -F ~/.zshenv .zshenv
 
 echo ""
 echo "Hard linking ./vscode/extensions.json to ~/.vscode/extensions.json"
-link ~/.vscode/extensions.json vscode/extensions.json
+mkdir -p ~/.vscode/ && touch ~/.vscode/extensions.json && ln -F ~/.vscode/extensions.json vscode/extensions.json
 
 echo ""
 echo "Hard linking ./vscode/settings.json to ~/Library/Application Support/Code/User/settings.json"
-link ~/Library/Application Support/Code/User/settings.json vscode/settings.json
+mkdir -p ~/Library/Application\ Support/Code/User/ && touch ~/Library/Application\ Support/Code/User/settings.json && ln -F ~/Library/Application\ Support/Code/User/settings.json vscode/settings.json
 
 echo ""
 echo "Hard linking ./htoprc to ~/.config/htop/htoprc"
-link ~/.config/htop/htoprc htoprc
+mkdir -p ~/.config/htop/ && touch ~/.config/htop/htoprc && ln -F ~/.config/htop/htoprc htoprc
 
 echo ""
 echo "Hard linking ./.hyper.js to ~/.hyper.js"
-link ~/.hyper.js .hyper.js
+touch ~/.hyper.js && ln -F ~/.hyper.js .hyper.js
 
 echo "Bootstrapping complete"
 echo "NOTE: You will still need to configure MagicPrefs via the GUI."
