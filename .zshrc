@@ -69,20 +69,6 @@ man() {
 }
 
 setopt prompt_subst
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' actionformats \
-	    '%F{magenta}%f%s %F{white}%b|%F{red}%a%F{magenta}%f '
-zstyle ':vcs_info:*' formats       \
-	    '%F{magenta}%f%s %F{white}%b%F{magenta}%f '
-zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{red}:%F{yellow}%r'
-zstyle ':vcs_info:*' enable git cvs svn
-
-vcs_info_wrapper() {
-    vcs_info
-        if [ -n "$vcs_info_msg_0_" ]; then
-            echo "%{$fg[grey]%}${vcs_info_msg_0_}%{$reset_color%}$del"
-        fi
-}
 NEWLINE=$'\n'
 PROMPT='%F{green}${NEWLINE}%D{%r} %f%F{yellow}%n%f $(git_super_status)%f%F{magenta}${NEWLINE}%~ %f%F{green}${NEWLINE}$%f '
 RPROMPT=''
