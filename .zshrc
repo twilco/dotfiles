@@ -53,6 +53,7 @@ ZSH_THEME=""
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git autojump brew docker npm)
 source $ZSH/oh-my-zsh.sh
+source ~/zsh-git-prompt/zshrc.sh
 
 ### colored man pages
 man() {
@@ -83,7 +84,7 @@ vcs_info_wrapper() {
         fi
 }
 NEWLINE=$'\n'
-PROMPT='%F{green}${NEWLINE}%D{%r} %f%F{yellow}%n $(vcs_info_wrapper)%f%F{magenta}${NEWLINE}%~ %f%F{green}${NEWLINE}$%f '
+PROMPT='%F{green}${NEWLINE}%D{%r} %f%F{yellow}%n%f $(git_super_status)%f%F{magenta}${NEWLINE}%~ %f%F{green}${NEWLINE}$%f '
 RPROMPT=''
 
 source ~/.zshenv
