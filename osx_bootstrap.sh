@@ -36,6 +36,10 @@ echo ""
 echo "Installing zsh"
 brew install zsh
 
+echo ""
+echo "Clone zsh git prompt repo"
+git clone https://github.com/twilco/zsh-git-prompt.git ~/zsh-git-prompt
+
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo ""
     echo "Install oh-my-zsh"
@@ -161,27 +165,27 @@ echo ""
 
 echo ""
 echo "Hard linking ./zshrc to ~/.zshrc"
-ln -F ~/.zshrc .zshrc
+link ./.zshrc ~/.zshrc
 
 echo ""
 echo "Hard linking ./zshenv to ~/.zshenv"
-ln -F ~/.zshenv .zshenv
+link ./.zshenv ~/.zshenv
 
 echo ""
 echo "Hard linking ./vscode/extensions.json to ~/.vscode/extensions.json"
-mkdir -p ~/.vscode/ && touch ~/.vscode/extensions.json && ln -F ~/.vscode/extensions.json vscode/extensions.json
+mkdir -p ~/.vscode/ && link ./vscode/extensions.json ~/.vscode/extensions.json
 
 echo ""
 echo "Hard linking ./vscode/settings.json to ~/Library/Application Support/Code/User/settings.json"
-mkdir -p ~/Library/Application\ Support/Code/User/ && touch ~/Library/Application\ Support/Code/User/settings.json && ln -F ~/Library/Application\ Support/Code/User/settings.json vscode/settings.json
+mkdir -p ~/Library/Application\ Support/Code/User/ && link ./vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 echo ""
 echo "Hard linking ./htoprc to ~/.config/htop/htoprc"
-mkdir -p ~/.config/htop/ && touch ~/.config/htop/htoprc && ln -F ~/.config/htop/htoprc htoprc
+mkdir -p ~/.config/htop/ && link ./htoprc ~/.config/htop/htoprc
 
 echo ""
 echo "Hard linking ./.hyper.js to ~/.hyper.js"
-touch ~/.hyper.js && ln -F ~/.hyper.js .hyper.js
+link ./.hyper.js ~/.hyper.js
 
 echo "Bootstrapping complete"
 echo "NOTE: You will still need to configure MagicPrefs via the GUI."
