@@ -1,4 +1,8 @@
-# ls ALIASES
+# random
+# --------------------------------
+mdkir='mkdir'
+
+# ls 
 # --------------------------------
 ### Colorize the ls output
 alias ls='ls -G'
@@ -7,7 +11,7 @@ alias ll='ls -la'
 ### Show hidden files
 alias l.='ls -Gd .*'
 
-# cd ALIASES
+# cd 
 # --------------------------------
 ### back 1 directory 
 alias ..='cd ..'
@@ -22,28 +26,29 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../' 
 alias .4='cd ../../../../' 
 
-# GIT ALIASES
+# git 
 # --------------------------------
 ### use hub wrapper over git commands
 alias git='hub'
 alias gmff='git merge'
 alias gm='git merge --no-ff'
-# DOCKER ALIASES
+
+# docker 
 # --------------------------------
 alias dcd='docker-compose down'
 alias dcu='docker-compose up -d'
 alias dcp='docker-compose pull'
 alias dcrs='dcd && dcp; dcu'
 
-# ANSIBLE ALIASES
+# ansible 
 # --------------------------------
 alias ag='ansible-galaxy -r install roles/requirements.yml --force'
 
-# GRADLE ALIASES
+# gradle 
 # --------------------------------
 alias gir='./gradlew idea --refresh-dependencies'
 alias gi='./gradlew idea'
 
-# WIDEN ALIASES
+# widen 
 # --------------------------------
 alias wcom='~/scripts/print-widen-commit-syntax.sh'
