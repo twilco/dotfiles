@@ -38,7 +38,11 @@ brew install zsh
 
 echo ""
 echo "Clone zsh git prompt repo"
-git clone https://github.com/twilco/zsh-git-prompt.git ~/zsh-git-prompt
+git clone https://github.com/twilco/zsh-git-prompt.git ~/.zsh/zsh-git-prompt
+
+echo ""
+echo "Clone zsh-autosuggestions repo"
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo ""
@@ -52,6 +56,7 @@ chsh -s /bin/zsh
 
 PACKAGES=(
     curl
+    diff-so-fancy
     ffmpeg
     git
     hub
@@ -158,6 +163,10 @@ defaults write com.apple.finder ShowStatusBar -bool true
 echo ""
 echo "Enabling HiDPI display modes (requires restart)"
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+
+echo ""
+echo "Configuring git diff to use the 'diff-so-fancy' package for all git diff operations"
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 echo ""
 echo "Linking config files..."
