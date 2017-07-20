@@ -26,7 +26,8 @@ alias .4='cd ../../../../'
 # --------------------------------
 ### use hub wrapper over git commands
 alias git='hub'
-
+alias gmff='git merge'
+alias gm='git merge --no-ff'
 # DOCKER ALIASES
 # --------------------------------
 alias dcd='docker-compose down'
@@ -37,3 +38,12 @@ alias dcrs='dcd && dcp; dcu'
 # ANSIBLE ALIASES
 # --------------------------------
 alias ag='ansible-galaxy -r install roles/requirements.yml --force'
+
+# GRADLE ALIASES
+# --------------------------------
+alias gir='./gradlew idea --refresh-dependencies'
+alias gi='./gradlew idea'
+
+# WIDEN ALIASES
+# --------------------------------
+alias wcom='~/scripts/print-widen-commit-syntax.sh'
