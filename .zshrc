@@ -51,9 +51,8 @@ ZSH_THEME=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump brew docker npm)
+plugins=(git autojump brew docker npm osx)
 source $ZSH/oh-my-zsh.sh
-source ~/zsh-git-prompt/zshrc.sh
 
 ### colored man pages
 man() {
@@ -72,7 +71,8 @@ setopt prompt_subst
 NEWLINE=$'\n'
 PROMPT='%F{green}${NEWLINE}%D{%r} %f%F{yellow}%n%f $(git_super_status)%f%F{magenta}${NEWLINE}%~ %f%F{green}${NEWLINE}$%f '
 RPROMPT=''
-
+source ~/.zsh/zsh-autosuggestion/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-git-prompt/zshrc.sh
 source ~/.zshenv
 
 # User configuration
