@@ -165,6 +165,10 @@ echo "Enabling HiDPI display modes (requires restart)"
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 echo ""
+echo "Enabling text replacement on all apps"
+defaults write -g WebAutomaticTextReplacementEnabled -bool true
+
+echo ""
 echo "Configuring git diff to use the 'diff-so-fancy' package for all git diff operations"
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
