@@ -95,6 +95,7 @@ CASKS=(
     iterm2
     java
     magicprefs
+    ripgrep
     slack
     spectacle
     spotify
