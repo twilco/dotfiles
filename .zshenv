@@ -1,8 +1,8 @@
 # random
 # --------------------------------
-mdkir='mkdir'
+alias mdkir='mkdir'
 
-# ls 
+# ls
 # --------------------------------
 ### Colorize the ls output
 alias ls='ls -G'
@@ -11,7 +11,7 @@ alias ll='ls -la'
 ### Show hidden files
 alias l.='ls -Gd .*'
 
-# cd 
+# cd
 # --------------------------------
 ### back 1 directory 
 alias ..='cd ..'
@@ -26,29 +26,36 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../' 
 alias .4='cd ../../../../' 
 
-# git 
+# git
 # --------------------------------
 ### use hub wrapper over git commands
 alias git='hub'
 alias gmff='git merge'
 alias gm='git merge --no-ff'
+alias gcoh='git checkout HEAD'
+alias gslp='git stash && git pull && git stash pop'
 
-# docker 
+# docker
 # --------------------------------
 alias dcd='docker-compose down'
 alias dcu='docker-compose up -d'
 alias dcp='docker-compose pull'
 alias dcrs='dcd && dcp; dcu'
 
-# ansible 
+# ansible
 # --------------------------------
 alias ag='ansible-galaxy -r install roles/requirements.yml --force'
 
-# gradle 
+# gradle
 # --------------------------------
 alias gir='./gradlew idea --refresh-dependencies'
 alias gi='./gradlew idea'
 
-# widen 
+# widen
 # --------------------------------
 alias wcom='~/scripts/print-widen-commit-syntax.sh'
+
+# elasticsearch
+#---------------------------------
+alias pull-es-docker='docker pull docker.elastic.co/elasticsearch/elasticsearch:5.5.2'
+alias esdr='docker run -p 9200:9200 -e "http.host=0.0.0.0" -e "transport.host=127.0.0.1" docker.elastic.co/elasticsearch/elasticsearch:5.5.2'
