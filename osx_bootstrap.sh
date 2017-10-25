@@ -128,7 +128,11 @@ echo ""
 echo "Configuring OSX..."
 
 echo ""
-echo "Seting fast key repeat rate"
+echo "Showing hidden files in Finder by default"
+defaults write com.apple.finder AppleShowAllFiles YES
+
+echo ""
+echo "Setting fast key repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 0
 
 echo ""
