@@ -1,0 +1,12 @@
+#!/bin/bash 
+echo "" 
+echo "running git pre-commit hook" 
+echo "running 'cargo fmt --all'" 
+cargo fmt --all 
+echo "running 'tslint --fix -p frontend/tsconfig.json'" 
+tslint --fix -p frontend/tsconfig.json 
+echo "" 
+# re-add all staged files in case they changed with the commands above.  use --diff-filter=d to exclude deleted files because they break this script
+if [[ $(git diff --name-only --staged --diff-filter=d) ]]; then 
+    git add $(git diff --name-only --staged --diff-filter=d) 
+fi
