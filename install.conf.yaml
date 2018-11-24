@@ -7,10 +7,13 @@
 
 - link:
     ~/.gitconfig: gitconfig
+    ~/.hyper.js: hyper.js
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.config: config
     ~/Library/Application\ Support/Code/User: vscode
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

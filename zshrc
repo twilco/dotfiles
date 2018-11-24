@@ -1,8 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:/bin:/usr/bin
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/$USER/.oh-my-zsh
+export NO_HEADLESS=1
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -71,8 +73,9 @@ setopt prompt_subst
 NEWLINE=$'\n'
 PROMPT='%F{green}${NEWLINE}%D{%r} %f%F{yellow}%n%f $(git_super_status)%f%F{magenta}${NEWLINE}%~ %f%F{green}${NEWLINE}$%f '
 RPROMPT=''
-source ~/.zsh/zsh-autosuggestion/zsh-autosuggestions.zsh
+
 source ~/.zsh/zsh-git-prompt/zshrc.sh
+source ~/.zsh/zsh-autosuggestion/zsh-autosuggestions.zsh
 source ~/.zshenv
 
 # User configuration
@@ -99,3 +102,18 @@ source ~/.zshenv
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export GROOVY_HOME=/usr/local/Cellar/groovysdk/2.5.0/libexec
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/Cellar/terraform/0.11.7/bin/terraform terraform
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# added by travis gem
+[ -f /Users/twilcock/.travis/travis.sh ] && source /Users/twilcock/.travis/travis.sh
