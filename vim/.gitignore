@@ -1,0 +1,6 @@
+backup/*
+bundle/*
+tmp/*
+undo/*
+init.vim
+.netrwhist
