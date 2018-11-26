@@ -37,3 +37,10 @@ alias = "!git config -l | grep alias | cut -c 7-"
 
 [pull]
 rebase = preserve
+
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"

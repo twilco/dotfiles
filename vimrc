@@ -54,6 +54,10 @@ set showmatch
 set autoread
 " enable the ability to read modelines from files
 set modeline
+" prevent vim from trying to analyze too much when files have extremely long single lines
+set synmaxcol=500
+" No whitespace in vimdiff
+set diffopt+=iwhite 
 
 """" Search settings
 " search as characters are entered, rather than when search is completed
@@ -94,3 +98,8 @@ set ttyfast
 " enable wild menu, which gives a command line completion menu
 set wildmenu
 set wildmode=longest:full,full
+set wildignore=.hg,.svn,*~,*.png,*.jpg,*.gif,*.settings,Thumbs.db,*.min.js,*.swp,publish/*,intermediate/*,*.o,*.hi,Zend,vendor
+set nolist
+set listchars=nbsp:¬,extends:»,precedes:«,trail:•
+"""" Colors
+set background=dark
