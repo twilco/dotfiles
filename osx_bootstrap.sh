@@ -29,6 +29,10 @@ echo "Installing GNU find, locate, updatedb, and xargs, g-prefixed"
 brew install findutils
 
 echo ""
+echo "Installing cpuinfo - take action to add this to the MacOS top menubar"
+brew cask install cpuinfo
+
+echo ""
 echo "Installing Bash 4"
 brew install bash
 
