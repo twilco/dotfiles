@@ -10,6 +10,7 @@
     ~/.hyper.js: hyper.js
     ~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.ideavimrc: ideavimrc
     ~/.config: config
     ~/Library/Application\ Support/Code/User: vscode
     ~/.zshenv: zshenv

@@ -2,6 +2,53 @@
 " disable compatibility with old terminals to get shiny vim improvements
 set nocompatible
 
+" use space as our leader
+let mapleader="\<Space>" 
+
+"""" Plugins
+" install vim plugged if it doesn't already exist
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+if has('unix') || has('macunix')
+    call plug#begin('~/.vim/bundle')
+elseif has('win32') || has('win32unix') || has('win64')
+    call plug#begin('~/vimfiles/bundle')
+endif
+
+Plug 'ciaranm/securemodelines'
+Plug 'itchyny/lightline.vim'
+Plug 'tomasiser/vim-code-dark'
+
+call plug#end()
+
+"""" Plugin settings
+let g:secure_modelines_allowed_items = [
+                \ "textwidth",   "tw",
+                \ "softtabstop", "sts",
+                \ "tabstop",     "ts",
+                \ "shiftwidth",  "sw",
+                \ "expandtab",   "et",   "noexpandtab", "noet",
+                \ "filetype",    "ft",
+                \ "foldmethod",  "fdm",
+                \ "readonly",    "ro",   "noreadonly", "noro",
+                \ "rightleft",   "rl",   "norightleft", "norl",
+                \ "colorcolumn"
+                \ ]
+
+let g:lightline = {
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \ },
+\ }
+
+function! LightlineFilename()
+  return expand('%:t') !=# '' ? @% : '[No Name]'
+endfunction
+
 """" Backup
 set backupcopy=yes
 set backupdir=~/.vim/backup
@@ -25,8 +72,6 @@ set encoding=utf-8
 scriptencoding utf-8
 
 """" Key remappings
-" use , as our leader
-let mapleader="," 
 " jk is escape
 inoremap jk <esc>
 " turn off search highlight - vim likes to keep searches highlighted even after the search has been closed sometimes, so this will unhighlight our search for us
@@ -52,8 +97,6 @@ set showcmd
 set showmatch 
 " when file has changed outside vim, automatically update it
 set autoread
-" enable the ability to read modelines from files
-set modeline
 " prevent vim from trying to analyze too much when files have extremely long single lines
 set synmaxcol=500
 " No whitespace in vimdiff
@@ -89,7 +132,9 @@ set showmatch
 " open new buffers below rather than above
 set splitbelow
 " enable 256 colors in terminal
-set t_Co=256
+if !has('gui_running')
+  set t_Co=256
+endif
 
 set title
 " make things FASTER
@@ -107,3 +152,4 @@ if exists('+termguicolors')
 elseif exists('+guicolors')
     set guicolors
 endif
+colorscheme codedark
