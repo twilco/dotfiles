@@ -90,7 +90,6 @@ set showmatch
 set splitbelow
 " enable 256 colors in terminal
 set t_Co=256
-set termguicolors
 
 set title
 " make things FASTER
@@ -103,3 +102,8 @@ set nolist
 set listchars=nbsp:¬,extends:»,precedes:«,trail:•
 """" Colors
 set background=dark
+if exists('+termguicolors')
+    set termguicolors
+elseif exists('+guicolors')
+    set guicolors
+endif
