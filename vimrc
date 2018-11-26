@@ -22,6 +22,7 @@ endif
 Plug 'ciaranm/securemodelines'
 Plug 'itchyny/lightline.vim'
 Plug 'tomasiser/vim-code-dark'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -40,10 +41,15 @@ let g:secure_modelines_allowed_items = [
                 \ ]
 
 let g:lightline = {
-      \ 'component_function': {
-      \   'filename': 'LightlineFilename',
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
       \ },
-\ }
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 
 function! LightlineFilename()
   return expand('%:t') !=# '' ? @% : '[No Name]'
