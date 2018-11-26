@@ -11,7 +11,7 @@
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.config: config
-    ~/Library/Application\ Support/Code/User: vscode
+    ~/Library/Application\ Support/Code/User: .vscode
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
 

@@ -212,4 +212,5 @@ link ./.hyper.js ~/.hyper.js
 echo "Bootstrapping complete"
 echo "NOTE: You will still need to configure MagicPrefs via the GUI."
 echo "NOTE: You will still need to install Meld, since that is what our .gitconfig uses as the difftool. http://meldmerge.org/"
+echo "NOTE: You will still need to install the Hack font (assuming you still use it).  https://support.apple.com/en-us/HT201749 <- install instructions, https://sourcefoundry.org/hack/ <- font download
 echo "NOTE: Review the entire output of this script to ensure no other action needs to be taken."
