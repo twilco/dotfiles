@@ -136,6 +136,10 @@ echo "Showing hidden files in Finder by default"
 defaults write com.apple.finder AppleShowAllFiles YES
 
 echo ""
+echo "Disable the “Are you sure you want to open this application?” dialog"
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+echo ""
 echo "Setting fast key repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 0
 
@@ -177,6 +181,41 @@ echo ""
 echo "Enabling text replacement on all apps"
 defaults write -g WebAutomaticTextReplacementEnabled -bool true
 
+#### Terminal
+
+echo ""
+echo "Only use UTF-8 in Terminal.app"
+defaults write com.apple.terminal StringEncodings -array 4
+
+#### Safari
+
+echo ""
+echo "Privacy: don’t send search queries to Apple"
+defaults write com.apple.Safari UniversalSearchEnabled -bool false
+defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+
+echo ""
+echo "Enable Safari’s debug menu"
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+echo ""
+echo "Add a context menu item for showing the Web Inspector in web views"
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+echo ""
+echo "Remove useless icons from Safari’s bookmarks bar"
+defaults write com.apple.Safari ProxiesInBookmarksBar "()"
+
+echo ""
+echo "Enable the Develop menu and the Web Inspector in Safari"
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+echo ""
+echo "Enable “Do Not Track”"
+defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+
 echo ""
 echo "Configuring git diff to use the 'diff-so-fancy' package for all git diff operations"
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
@@ -214,3 +253,5 @@ echo "NOTE: You will still need to configure MagicPrefs via the GUI."
 echo "NOTE: You will still need to install Meld, since that is what our .gitconfig uses as the difftool. http://meldmerge.org/"
 echo "NOTE: You will still need to install the Hack font (assuming you still use it).  https://support.apple.com/en-us/HT201749 <- install instructions, https://sourcefoundry.org/hack/ <- font download
 echo "NOTE: Review the entire output of this script to ensure no other action needs to be taken."
+echo "Once you have taken all necessary actions, restart your computer to make the changes take effect."
+
