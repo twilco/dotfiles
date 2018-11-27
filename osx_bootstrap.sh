@@ -90,13 +90,13 @@ echo "Installing cask..."
 brew install caskroom/cask/brew-cask
 
 CASKS=(
+    alacritty
     alfred
     dropbox
     firefox
     flux
     google-chrome
     gpgtools
-    iterm2
     java
     magicprefs
     ripgrep

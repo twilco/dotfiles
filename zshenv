@@ -29,7 +29,6 @@ alias .4='cd ../../../../'
 # git
 # --------------------------------
 ### use hub wrapper over git commands
-alias git='hub'
 alias gmff='git merge'
 alias gm='git merge --no-ff'
 alias gcoh='git checkout HEAD'
