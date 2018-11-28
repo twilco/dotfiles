@@ -23,6 +23,7 @@ Plug 'ciaranm/securemodelines'
 Plug 'itchyny/lightline.vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
