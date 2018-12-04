@@ -1,7 +1,6 @@
 """" Startup
 " disable compatibility with old terminals to get shiny vim improvements
 set nocompatible
-
 " use space as our leader
 let mapleader="\<Space>" 
 
@@ -19,11 +18,24 @@ elseif has('win32') || has('win32unix') || has('win64')
     call plug#begin('~/vimfiles/bundle')
 endif
 
+" asynchronous code linting
+Plug 'w0rp/ale'
+" ALE indicators for lightline
+Plug 'maximbaz/lightline-ale'
+" support vim's modeline in a secure way
 Plug 'ciaranm/securemodelines'
+" bottom status bar
 Plug 'itchyny/lightline.vim'
+" completion engine
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+" color scheme
 Plug 'tomasiser/vim-code-dark'
+" plugin for git
 Plug 'tpope/vim-fugitive'
+" adds comment operator - gc/gcc
 Plug 'tpope/vim-commentary'
+" better syntax highlighting
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -41,20 +53,55 @@ let g:secure_modelines_allowed_items = [
                 \ "colorcolumn"
                 \ ]
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ }
+" don't show -- INSERT --, pointless as we have lightline 
+set noshowmode
+" Initialize lightline config
+let g:lightline = {}
 
-function! LightlineFilename()
-  return expand('%:t') !=# '' ? @% : '[No Name]'
-endfunction
+" Disable lightline's tab bar
+let g:lightline.enable = {'tabline': 0}
+
+" Add lightline-ale components to lightline
+let g:lightline.component_expand = {
+\  'linter_checking': 'lightline#ale#checking',
+\  'linter_warnings': 'lightline#ale#warnings',
+\  'linter_errors': 'lightline#ale#errors',
+\  'linter_ok': 'lightline#ale#ok',
+\  'gitbranch': 'fugitive#head'
+\ }
+
+" Set colours for the components
+let g:lightline.component_type = {
+\  'linter_checking': 'left',
+\  'linter_warnings': 'warning',
+\  'linter_errors': 'error',
+\  'linter_ok': 'left'
+\ }
+
+" Configure lightline's statusbar
+let g:lightline.active = {
+\  'left': [[ 'mode', 'paste'], ['gitbranch', 'readonly', 'relativepath', 'modified']],
+\  'right': [
+\    ['lineinfo'],
+\    ['percent'],
+\    ['fileformat', 'fileencoding', 'filetype'],
+\	   ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok']
+\  ]
+\ }
+" let g:lightline = {
+"       \ 'colorscheme': 'wombat',
+"       \ 'active': {
+"       \   'left': [ [ 'mode', 'paste' ],
+"       \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ]
+"       \ },
+"       \ 'component_function': {
+"       \   'gitbranch': 'fugitive#head'
+"       \ },
+"       \ }
+
+" function! LightlineFilename()
+"   return expand('%:t') !=# '' ? @% : '[No Name]'
+" endfunction
 
 """" Backup
 set backupcopy=yes
@@ -73,6 +120,11 @@ set whichwrap+=<,>,h,l
 " do not wrap long lines - let them be displayed in very long horizontal lines
 set nowrap
 set nojoinspaces
+" use 4 spaces to represent tab
+set tabstop=2
+set softtabstop=2
+" number of spaces to use for auto indent
+set shiftwidth=2
 
 """" File formats and encodings
 set encoding=utf-8
@@ -83,6 +135,33 @@ scriptencoding utf-8
 inoremap jk <esc>
 " turn off search highlight - vim likes to keep searches highlighted even after the search has been closed sometimes, so this will unhighlight our search for us
 nnoremap <leader><space> :nohlsearch<CR>
+
+"" COC key remappings
+" use <tab> for trigger completion and navigate next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+" allow <S-Tab> to navigate coc completions backwards
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" use enter to confirm complete
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+" close preview when completion is done
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+"" End COC key remappings
+
+" make searches always appear in center of page
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
 
 """" Miscellaneous settings
 " minimal automatic indenting for any file type
@@ -142,6 +221,9 @@ set splitbelow
 if !has('gui_running')
   set t_Co=256
 endif
+" render a vertical column at 80 characters
+set colorcolumn=80
+highlight ColorColumn ctermbg=232
 
 set title
 " make things FASTER

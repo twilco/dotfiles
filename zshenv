@@ -60,7 +60,7 @@ alias gcah='git checkout HEAD .idea/modules.xml && git checkout HEAD .idea/runCo
 alias npmbd='cd web && npm run build-dev && cd ..'
 alias fix-patterns='rm -r node_modules/npm'
 alias dgir='./gradlew idea --refresh-dependencies && nvm use 6 && ./js.sh'
-
+alias kdploy='function kdploy() { helm list | rg $1 | awk '{print $1}' | xargs helm delete --purge }'
 ### build all lannister lambdas 
 alias lnba='./gradlew :lannister-lambda:accountworker:lambdaZip :lannister-lambda:billableaccounts:lambdaZip :lannister-lambda:integrationtest:lambdaZip'
 ### upload all lannister lambdas to S3
