@@ -83,8 +83,9 @@ alias esdr='docker run -p 9200:9200 -e "http.host=0.0.0.0" -e "transport.host=12
 #---------------------------------
 alias cb='cargo build'
 alias cck='cargo check'
-alias ct='cargo test'
 alias cdo='cargo doc --open'
+alias cfmt='cargo fmt'
 alias cr='cargo run'
+alias ct='cargo test'
 alias twas='cargo test --target wasm32-unknown-unknown'
 
