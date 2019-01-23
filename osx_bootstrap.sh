@@ -74,6 +74,7 @@ PACKAGES=(
     tmux
     tree
     vim
+    watch
     wget
 )
 

@@ -62,9 +62,9 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>154 189 796 486 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>308 336 572 453 0 0 1440 877 </string>
+	<string>484 472 572 378 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>273 100 572 453 0 0 1920 1057 </string>
+	<string>273 170 572 378 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -659,6 +659,8 @@
 			<string>/Users/twilcock</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveRequestedFullDiskAccess</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
@@ -739,7 +741,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-11-24T18:10:25Z</date>
+	<date>2019-01-03T16:31:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SwitchPaneModifier</key>
@@ -758,9 +760,11 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.2.5</string>
+	<string>3.2.6</string>
 </dict>
 </plist>

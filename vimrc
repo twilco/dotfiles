@@ -26,6 +26,9 @@ Plug 'maximbaz/lightline-ale'
 Plug 'ciaranm/securemodelines'
 " bottom status bar
 Plug 'itchyny/lightline.vim'
+" elixir 
+Plug 'slashmili/alchemist.vim'
+Plug 'elixir-editors/vim-elixir'
 " completion engine
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 " color scheme
@@ -36,6 +39,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 " better syntax highlighting
 Plug 'sheerun/vim-polyglot'
+" allows vim to identify project roots from known files such as .git
+Plug 'airblade/vim-rooter'
+" fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" change cursor shape in different modes, improved mouse support, focus
+" reporting, paste in any mode
+Plug 'wincent/terminus'
 
 call plug#end()
 
@@ -103,6 +115,11 @@ let g:lightline.active = {
 "   return expand('%:t') !=# '' ? @% : '[No Name]'
 " endfunction
 
+if executable('rg')
+	set grepprg=rg\ --no-heading\ --vimgrep
+	set grepformat=%f:%l:%c:%m
+endif
+
 """" Backup
 set backupcopy=yes
 set backupdir=~/.vim/backup
@@ -135,6 +152,25 @@ scriptencoding utf-8
 inoremap jk <esc>
 " turn off search highlight - vim likes to keep searches highlighted even after the search has been closed sometimes, so this will unhighlight our search for us
 nnoremap <leader><space> :nohlsearch<CR>
+
+" <leader>s for Rg search
+noremap <leader>s :Rg
+let g:fzf_layout = { 'down': '~20%' }
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+function! s:list_cmd()
+  let base = fnamemodify(expand('%'), ':h:.:S')
+  return base == '.' ? 'fd --type file --follow' : printf('fd --type file --follow | proximity-sort %s', expand('%'))
+endfunction
+
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, {'source': s:list_cmd(),
+  \                               'options': '--tiebreak=index'}, <bang>0)
 
 "" COC key remappings
 " use <tab> for trigger completion and navigate next complete item

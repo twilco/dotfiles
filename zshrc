@@ -77,6 +77,7 @@ RPROMPT=''
 source ~/.zsh/zsh-git-prompt/zshrc.sh
 source ~/.zsh/zsh-autosuggestion/zsh-autosuggestions.zsh
 source ~/.zshenv
+source ~/.zshenv-secret
 
 # User configuration
 
@@ -117,3 +118,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # added by travis gem
 [ -f /Users/twilcock/.travis/travis.sh ] && source /Users/twilcock/.travis/travis.sh
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
