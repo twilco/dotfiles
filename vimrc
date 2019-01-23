@@ -44,7 +44,6 @@ Plug 'airblade/vim-rooter'
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-
 " change cursor shape in different modes, improved mouse support, focus
 " reporting, paste in any mode
 Plug 'wincent/terminus'
@@ -150,8 +149,19 @@ scriptencoding utf-8
 """" Key remappings
 " jk is escape
 inoremap jk <esc>
+
+" ; as :
+nnoremap ; :
+
 " turn off search highlight - vim likes to keep searches highlighted even after the search has been closed sometimes, so this will unhighlight our search for us
 nnoremap <leader><space> :nohlsearch<CR>
+
+" Open hotkeys
+map <C-p> :Files<CR>
+nmap <leader>; :Buffers<CR>
+
+" Quick-save
+nmap <leader>w :w<CR>
 
 " <leader>s for Rg search
 noremap <leader>s :Rg

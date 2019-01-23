@@ -1,0 +1,4 @@
+**/node_modules/*
+**/zshenv-secret
+config/coc/db.json
+config/gtk-2.0/gtkfilechooser.ini

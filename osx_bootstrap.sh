@@ -61,6 +61,7 @@ chsh -s /bin/zsh
 PACKAGES=(
     curl
     diff-so-fancy
+    fd
     ffmpeg
     git
     hub

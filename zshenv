@@ -1,3 +1,7 @@
+# env variables
+export FZF_DEFAULT_COMMAND='fd --type file --follow'
+export FZF_CTRL_T_COMMAND='fd --type file --follow'
+
 # random
 # --------------------------------
 alias mdkir='mkdir'
