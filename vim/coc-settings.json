@@ -1,0 +1,9 @@
+{
+  "coc.preferences.autoTrigger": "always",
+  "coc.preferences.diagnostic.enable": false,
+  "coc.preferences.snippets.enable": false,
+  "coc.source.dictionary.enable": false,
+  "coc.source.tag.enable": false,
+  "coc.source.word.enable": false,
+  "coc.preferences.noselect": false
+}
