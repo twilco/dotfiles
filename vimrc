@@ -267,8 +267,8 @@ set splitbelow
 if !has('gui_running')
   set t_Co=256
 endif
-" render a vertical column at 80 characters
-set colorcolumn=80
+" render a vertical column at 120 characters
+set colorcolumn=120
 highlight ColorColumn ctermbg=232
 
 set title
