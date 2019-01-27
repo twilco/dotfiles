@@ -95,3 +95,7 @@ alias cr='cargo run'
 alias ct='cargo test'
 alias twas='cargo test --target wasm32-unknown-unknown'
 
+
+# vim/neovim
+#---------------------------------
+alias v='nvim'

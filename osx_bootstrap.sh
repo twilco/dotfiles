@@ -101,6 +101,7 @@ CASKS=(
     gpgtools
     java
     magicprefs
+    neovim
     ripgrep
     slack
     spectacle

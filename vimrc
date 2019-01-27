@@ -1,4 +1,4 @@
-"""" Startup
+""" Startup
 " disable compatibility with old terminals to get shiny vim improvements
 set nocompatible
 " use space as our leader
