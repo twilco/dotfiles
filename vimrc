@@ -48,9 +48,21 @@ Plug 'junegunn/fzf.vim'
 " reporting, paste in any mode
 Plug 'wincent/terminus'
 
+" preview %s subsitutions as you type them
+Plug 'osyo-manga/vim-over'
+
+" language server support
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
 call plug#end()
 
 """" Plugin settings
+" LSP settings
+let g:LanguageClient_autoStart = 1
+
 let g:secure_modelines_allowed_items = [
                 \ "textwidth",   "tw",
                 \ "softtabstop", "sts",
@@ -162,6 +174,9 @@ nmap <leader>; :Buffers<CR>
 
 " Quick-save
 nmap <leader>w :w<CR>
+
+" Quick replace
+nnoremap <leader>r :OverCommandLine<CR> %s/<Paste>
 
 " <leader>s for Rg search
 noremap <leader>s :Rg
@@ -288,3 +303,4 @@ elseif exists('+guicolors')
     set guicolors
 endif
 colorscheme codedark
+hi Error ctermfg=203 ctermbg=234 guifg=#F44747 guibg=#1E1E1E
