@@ -47,6 +47,8 @@ alias dcu='docker-compose up -d'
 alias dcp='docker-compose pull'
 alias dcrs='dcb && dcu'
 alias dsta='docker stop $(docker ps -a -q)'
+alias dps='docker ps'
+alias dlo='docker logs'
 
 # ansible
 # --------------------------------
