@@ -5,6 +5,7 @@ export FZF_CTRL_T_COMMAND='fd --type file --follow'
 # random
 # --------------------------------
 alias mdkir='mkdir'
+alias sg='sr google'
 
 # ls
 # --------------------------------
