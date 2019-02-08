@@ -76,6 +76,10 @@ RPROMPT=''
 
 source ~/.zsh/zsh-git-prompt/zshrc.sh
 source ~/.zsh/zsh-autosuggestion/zsh-autosuggestions.zsh
+# ctrl + space to accept suggestion
+bindkey '^ ' autosuggest-accept
+# ctrl + enter to accept and execute suggestion - https://github.com/zsh-users/zsh-autosuggestions/issues/255
+bindkey '^[[[CE  [[CE' autosuggest-execute
 source ~/.zshenv
 source ~/.zshenv-secret
 
