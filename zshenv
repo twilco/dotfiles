@@ -51,6 +51,10 @@ alias dcrs='dcb && dcu'
 alias dsta='docker stop $(docker ps -a -q)'
 alias dps='docker ps'
 alias dlo='docker logs'
+alias dsh='dockersh'
+function dockersh() {
+  docker exec -it $1 /bin/bash
+}
 
 # ansible
 # --------------------------------
