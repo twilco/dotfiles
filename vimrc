@@ -57,9 +57,25 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
+" makes f, F, t and T movements more informative and convenient
+Plug 'rhysd/clever-f.vim'
+
+" automatically adjusts 'shiftwidth' and 'expandtab' intelligently based on
+" the existing indentation within the file or within the directory tree for
+" like files
+Plug 'tpope/vim-sleuth'
+
+" The vim-surround plugin allows one to add, change or delete surrounding pairs.
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 """" Plugin settings
+" clever-f
+let g:clever_f_across_no_line = 1
+let g:clever_f_fix_key_direction = 1
+let g:clever_f_timeout_ms = 3000
+
 " ALE settings
 " Don't use the sign column/gutter for ALE
 let g:ale_set_signs = 0
