@@ -266,6 +266,11 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
+"""" Autocommand
+
+" Leave paste mode when leaving insert mode
+autocmd InsertLeave * set nopaste
+
 """" Miscellaneous settings
 " minimal automatic indenting for any file type
 set autoindent 
