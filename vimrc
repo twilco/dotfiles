@@ -47,6 +47,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'wincent/terminus'
 " highlight yanked text
 Plug 'machakann/vim-highlightedyank'
+" facilitates smart vim split / tmux split navigation
+Plug 'christoomey/vim-tmux-navigator'
 
 " preview %s subsitutions as you type them
 Plug 'osyo-manga/vim-over'
@@ -208,6 +210,12 @@ inoremap jk <esc>
 
 " ; as :
 nnoremap ; :
+
+" easier split navigation - instead of ctrl-w and then j, it's just ctrl-j
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " turn off search highlight - vim likes to keep searches highlighted even after the search has been closed sometimes, so this will unhighlight our search for us
 nnoremap <leader><space> :nohlsearch<CR>

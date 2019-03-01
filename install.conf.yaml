@@ -6,13 +6,14 @@
 - clean: ['~']
 
 - link:
+    ~/.config: config
     ~/.gitconfig: gitconfig
     ~/.hyper.js: hyper.js
+    ~/.ideavimrc: ideavimrc
+    ~/Library/Application\ Support/Code/User: vscode
+    ~/.tmux.conf: tmux.conf
     ~/.vim: vim
     ~/.vimrc: vimrc
-    ~/.ideavimrc: ideavimrc
-    ~/.config: config
-    ~/Library/Application\ Support/Code/User: vscode
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
 
