@@ -45,6 +45,8 @@ Plug 'junegunn/fzf.vim'
 " change cursor shape in different modes, improved mouse support, focus
 " reporting, paste in any mode
 Plug 'wincent/terminus'
+" highlight yanked text
+Plug 'machakann/vim-highlightedyank'
 
 " preview %s subsitutions as you type them
 Plug 'osyo-manga/vim-over'
@@ -69,6 +71,8 @@ Plug 'tpope/vim-surround'
 call plug#end()
 
 """" Plugin settings
+" duration yanked text remains highlighted
+let g:highlightedyank_highlight_duration = 300
 " clever-f
 let g:clever_f_across_no_line = 1
 let g:clever_f_fix_key_direction = 1
