@@ -103,6 +103,14 @@ alias cr='cargo run'
 alias ct='cargo test'
 alias twas='cargo test --target wasm32-unknown-unknown'
 
+# tmux 
+#---------------------------------
+alias ta='tmux a'
+alias tat='tmux a -t'
+alias tn='tmux new'
+alias tls='tmux ls'
+alias tk='tmux kill-session -t'
+alias tkall='tmux kill-server'
 
 # vim/neovim
 #---------------------------------
