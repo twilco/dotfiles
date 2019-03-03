@@ -12,6 +12,9 @@ if test ! $(which brew); then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+echo "Installing Tmux plugin manager"
+git clone "https://github.com/tmux-plugins/tpm" "~/.tmux/plugins/tpm"
+
 echo ""
 echo "Updating homebrew recipes"
 brew update

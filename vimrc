@@ -16,6 +16,8 @@ elseif has('win32') || has('win32unix') || has('win64')
     call plug#begin('~/vimfiles/bundle')
 endif
 
+" fixes focus events from within tmux
+Plug 'tmux-plugins/vim-tmux-focus-events'
 " asynchronous code linting
 Plug 'w0rp/ale'
 " ALE indicators for lightline
