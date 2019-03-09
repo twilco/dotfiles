@@ -1,6 +1,8 @@
 # env variables
 export FZF_DEFAULT_COMMAND='fd --type file --follow'
 export FZF_CTRL_T_COMMAND='fd --type file --follow'
+export RISCV_OPENOCD_PATH='/Users/twilcock/usys/riscv/riscv-openocd-0.10.0-2019.02.0-x86_64-apple-darwin'
+export RISCV_PATH='/Users/twilcock/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin'
 
 # random
 # --------------------------------
