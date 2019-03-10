@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -164,15 +166,15 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>922 262 445 103 0 0 1440 900 </string>
+	<string>922 33 445 77 0 0 1440 900 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2330 432 620 392 1920 69 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 384 796 486 0 0 1920 1080 </string>
+	<string>154 400 796 486 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1166 202 572 378 -1440 0 1440 900 </string>
+	<string>552 248 572 378 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>273 170 572 378 0 0 1920 1057 </string>
+	<string>-1264 131 572 378 -1440 0 1440 900 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -775,6 +777,10 @@
 	<string>84AE880A-875F-4671-9C9F-5EB82BF36C58</string>
 	<key>NoSyncLastTipTime</key>
 	<real>523818235.93500102</real>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -849,7 +855,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-02-08T17:22:37Z</date>
+	<date>2019-03-09T19:21:30Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SwitchPaneModifier</key>
