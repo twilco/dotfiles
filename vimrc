@@ -16,6 +16,8 @@ elseif has('win32') || has('win32unix') || has('win64')
     call plug#begin('~/vimfiles/bundle')
 endif
 
+" syntax highlighting for markdown
+Plug 'gabrielelana/vim-markdown'
 " fixes focus events from within tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
 " asynchronous code linting
@@ -75,6 +77,27 @@ Plug 'tpope/vim-surround'
 call plug#end()
 
 """" Plugin settings
+
+" netrw
+" close if final buffer is netrw or the quickfix
+augroup finalcountdown
+ au!
+ autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'quickfix' |q|endif
+ " autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) || &buftype == 'quickfix' | q | endif
+ nmap - :Lexplore<cr>
+ " nmap - :NERDTreeToggle<cr>
+augroup END
+" automatically kill phantom buffers created by netrw - https://github.com/tpope/vim-vinegar/issues/13
+autocmd FileType netrw setl bufhidden=delete
+" hide top banner
+let g:netrw_banner = 0
+" wide list style
+let g:netrw_liststyle = 3
+" vertical split
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+
 " duration yanked text remains highlighted
 let g:highlightedyank_highlight_duration = 300
 " clever-f
