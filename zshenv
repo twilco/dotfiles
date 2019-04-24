@@ -1,13 +1,22 @@
 # env variables
 export FZF_DEFAULT_COMMAND='fd --type file --follow'
 export FZF_CTRL_T_COMMAND='fd --type file --follow'
-export RISCV_OPENOCD_PATH='/Users/twilcock/usys/riscv/riscv-openocd-0.10.0-2019.02.0-x86_64-apple-darwin'
-export RISCV_PATH='/Users/twilcock/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin'
+export RISCV_OPENOCD_PATH="$HOME/usys/riscv/riscv-openocd-0.10.0-2019.02.0-x86_64-apple-darwin"
+export RISCV_PATH="$HOME/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin"
 
 # random
 # --------------------------------
 alias mdkir='mkdir'
 alias sg='sr google'
+alias reloadshell='exec $SHELL -l'
+
+# riscv
+# --------------------------------
+alias rvgcc='~/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin/bin/riscv64-unknown-elf-gcc'
+alias rvas='~/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin/bin/riscv64-unknown-elf-as'
+alias rvgdb='~/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin/bin/riscv64-unknown-elf-gdb'
+alias rvld='~/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin/bin/riscv64-unknown-elf-ld'
+alias rvqemu='qemu-system-riscv64'
 
 # ls
 # --------------------------------
@@ -35,11 +44,12 @@ alias .4='cd ../../../../'
 
 # git
 # --------------------------------
-### use hub wrapper over git commands
 alias gmff='git merge'
 alias gm='git merge --no-ff'
 alias gcoh='git checkout HEAD'
 alias gslp='git stash && git pull && git stash pop'
+# pushes branch upstream and then opens PR URL in browser
+alias gprsup='open $(cat output.txt | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" | head -1)'
 
 # docker
 # --------------------------------

@@ -26,17 +26,17 @@ coc-css@^1.0.6:
     vscode-languageserver "^5.1.0"
     vscode-languageserver-protocol "^3.13.0"
 
-coc-html@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/coc-html/-/coc-html-1.0.6.tgz#6c71076a4fbda7ddd693143875cbe717c027427c"
-  integrity sha512-qdRe80XRxXbIWijBXnfdvj9Ozx45IqecZGxmBLGucnQ1S0Oec7qvPCy8PjRW7iCfRGqF18cjybFgp7w40Ai4Ww==
+coc-html@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/coc-html/-/coc-html-1.0.7.tgz#9b4a4c80684fe4ba49f7b313850e23f2cb79c6a3"
+  integrity sha512-TmIGj76PttArDeIjg7psPSLlVpm5Ya3xICwjogNPn2i3Ey1MnSxGPycw1jfaKpITsAOF3ZNRVn2dBVSG7vxSfQ==
   dependencies:
     tslib "^1.9.3"
-    typescript "^3.0.3"
-    vscode-css-languageservice "^3.0.10"
-    vscode-html-languageservice "^2.1.7"
-    vscode-languageserver "^5.0.3"
-    vscode-languageserver-types "^3.12.0"
+    typescript "^3.2.2"
+    vscode-css-languageservice "^3.0.13-next.3"
+    vscode-html-languageservice "^2.1.11-next.2"
+    vscode-languageserver "^5.2.1"
+    vscode-languageserver-types "^3.14.0"
     vscode-uri "^1.0.6"
 
 coc-jest@^1.0.1:
@@ -245,12 +245,17 @@ tslib@^1.9.3:
   resolved "https://widen.jfrog.io/widen/api/npm/npm-virtual/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha1-1+TdeSRdhUKMTX5IIqeZF5VMooY=
 
-typescript@^3.0.3, typescript@^3.1.6:
+typescript@^3.1.6:
   version "3.2.1"
   resolved "https://widen.jfrog.io/widen/api/npm/npm-virtual/typescript/-/typescript-3.2.1.tgz#0b7a04b8cf3868188de914d9568bd030f0c56192"
   integrity sha1-C3oEuM84aBiN6RTZVovQMPDFYZI=
 
-vscode-css-languageservice@^3.0.10, vscode-css-languageservice@^3.0.12:
+typescript@^3.2.2:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.1.tgz#b6691be11a881ffa9a05765a205cb7383f3b63c6"
+  integrity sha512-3NSMb2VzDQm8oBTLH6Nj55VVtUEpe/rgkIzMir0qVoLyjDZlnMBva0U6vDiV3IH+sl/Yu6oP5QwsAQtHPmDd2Q==
+
+vscode-css-languageservice@^3.0.12:
   version "3.0.12"
   resolved "https://widen.jfrog.io/widen/api/npm/npm-virtual/vscode-css-languageservice/-/vscode-css-languageservice-3.0.12.tgz#fb4aac5ae3c5b761b1db1d7224b78ff824284dc3"
   integrity sha1-+0qsWuPFt2Gx2x1yJLeP+CQoTcM=
@@ -258,10 +263,18 @@ vscode-css-languageservice@^3.0.10, vscode-css-languageservice@^3.0.12:
     vscode-languageserver-types "^3.13.0"
     vscode-nls "^4.0.0"
 
-vscode-html-languageservice@^2.1.7:
-  version "2.1.10"
-  resolved "https://widen.jfrog.io/widen/api/npm/npm-virtual/vscode-html-languageservice/-/vscode-html-languageservice-2.1.10.tgz#3433fd53e188cb25d5ea190b61a148fe9965ff91"
-  integrity sha1-NDP9U+GIyyXV6hkLYaFI/pll/5E=
+vscode-css-languageservice@^3.0.13-next.3:
+  version "3.0.13"
+  resolved "https://registry.yarnpkg.com/vscode-css-languageservice/-/vscode-css-languageservice-3.0.13.tgz#1788735b65fde54181ea458e6a52cc2bd6dd9126"
+  integrity sha512-RWkO/c/A7iXhHEy3OuEqkCqavDjpD4NF2Ca8vjai+ZtEYNeHrm1ybTnBYLP4Ft1uXvvaaVtYA9HrDjD6+CUONg==
+  dependencies:
+    vscode-languageserver-types "^3.13.0"
+    vscode-nls "^4.0.0"
+
+vscode-html-languageservice@^2.1.11-next.2:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/vscode-html-languageservice/-/vscode-html-languageservice-2.1.12.tgz#b4f9e23cac6fea74d4c9825fb4a4ef9bf313785e"
+  integrity sha512-mIb5VMXM5jI97HzCk2eadI1K//rCEZXte0wBqA7PGXsyJH4KTyJUaYk9MR+mbfpUl2vMi3HZw9GUOLGYLc6l5w==
   dependencies:
     vscode-languageserver-types "^3.13.0"
     vscode-nls "^4.0.0"
@@ -300,10 +313,23 @@ vscode-languageserver-protocol@3.13.0, vscode-languageserver-protocol@^3.10.3, v
     vscode-jsonrpc "^4.0.0"
     vscode-languageserver-types "3.13.0"
 
-vscode-languageserver-types@3.13.0, vscode-languageserver-types@^3.12.0, vscode-languageserver-types@^3.13.0, vscode-languageserver-types@^3.6.1:
+vscode-languageserver-protocol@3.14.1:
+  version "3.14.1"
+  resolved "https://registry.yarnpkg.com/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.14.1.tgz#b8aab6afae2849c84a8983d39a1cf742417afe2f"
+  integrity sha512-IL66BLb2g20uIKog5Y2dQ0IiigW0XKrvmWiOvc0yXw80z3tMEzEnHjaGAb3ENuU7MnQqgnYJ1Cl2l9RvNgDi4g==
+  dependencies:
+    vscode-jsonrpc "^4.0.0"
+    vscode-languageserver-types "3.14.0"
+
+vscode-languageserver-types@3.13.0, vscode-languageserver-types@^3.13.0, vscode-languageserver-types@^3.6.1:
   version "3.13.0"
   resolved "https://widen.jfrog.io/widen/api/npm/npm-virtual/vscode-languageserver-types/-/vscode-languageserver-types-3.13.0.tgz#b704b024cef059f7b326611c99b9c8753c0a18b4"
   integrity sha1-twSwJM7wWfezJmEcmbnIdTwKGLQ=
+
+vscode-languageserver-types@3.14.0, vscode-languageserver-types@^3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.14.0.tgz#d3b5952246d30e5241592b6dde8280e03942e743"
+  integrity sha512-lTmS6AlAlMHOvPQemVwo3CezxBp0sNB95KNPkqp3Nxd5VFEnuG1ByM0zlRWos0zjO3ZWtkvhal0COgiV1xIA4A==
 
 vscode-languageserver@^4.0.0:
   version "4.4.2"
@@ -313,12 +339,20 @@ vscode-languageserver@^4.0.0:
     vscode-languageserver-protocol "^3.10.3"
     vscode-uri "^1.0.5"
 
-vscode-languageserver@^5.0.3, vscode-languageserver@^5.1.0:
+vscode-languageserver@^5.1.0:
   version "5.1.0"
   resolved "https://widen.jfrog.io/widen/api/npm/npm-virtual/vscode-languageserver/-/vscode-languageserver-5.1.0.tgz#012a28f154cc7a848c443d217894942e4c3eeb39"
   integrity sha1-ASoo8VTMeoSMRD0heJSULkw+6zk=
   dependencies:
     vscode-languageserver-protocol "3.13.0"
+    vscode-uri "^1.0.6"
+
+vscode-languageserver@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/vscode-languageserver/-/vscode-languageserver-5.2.1.tgz#0d2feddd33f92aadf5da32450df498d52f6f14eb"
+  integrity sha512-GuayqdKZqAwwaCUjDvMTAVRPJOp/SLON3mJ07eGsx/Iq9HjRymhKWztX41rISqDKhHVVyFM+IywICyZDla6U3A==
+  dependencies:
+    vscode-languageserver-protocol "3.14.1"
     vscode-uri "^1.0.6"
 
 vscode-nls@^3.2.1, vscode-nls@^3.2.2:

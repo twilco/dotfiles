@@ -103,6 +103,7 @@ CASKS=(
     google-chrome
     gpgtools
     java
+    jq
     magicprefs
     neovim
     ripgrep

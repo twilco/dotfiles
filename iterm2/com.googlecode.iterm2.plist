@@ -172,9 +172,9 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>154 400 796 486 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>552 248 572 378 0 0 1440 900 </string>
+	<string>297 282 1132 518 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-1264 131 572 378 -1440 0 1440 900 </string>
+	<string>176 131 572 378 0 0 1440 900 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -805,6 +805,8 @@
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>4</integer>
 	<key>PointerActions</key>
@@ -842,6 +844,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/twilcock/projects/dotfiles/iterm2</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUAutomaticallyUpdate</key>
@@ -855,7 +859,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-03-09T19:21:30Z</date>
+	<date>2019-04-13T17:12:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SwitchPaneModifier</key>
