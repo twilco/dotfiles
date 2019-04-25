@@ -49,7 +49,7 @@ alias gm='git merge --no-ff'
 alias gcoh='git checkout HEAD'
 alias gslp='git stash && git pull && git stash pop'
 # pushes branch upstream and then opens PR URL in browser
-alias gprsup='open $(cat output.txt | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" | head -1)'
+alias gprsup='open $(git push --set-upstream origin $(git_current_branch) 2>&1 | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*")'
 
 # docker
 # --------------------------------
