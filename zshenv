@@ -17,6 +17,7 @@ alias rvas='~/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-da
 alias rvgdb='~/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin/bin/riscv64-unknown-elf-gdb'
 alias rvld='~/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin/bin/riscv64-unknown-elf-ld'
 alias rvqemu='qemu-system-riscv64'
+alias rvnm='~/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin/bin/riscv64-unknown-elf-nm'
 
 # ls
 # --------------------------------
