@@ -76,16 +76,16 @@ coc-tsserver@^1.1.16:
     vscode-uri "^1.0.6"
     which "^1.3.1"
 
-coc-yaml@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/coc-yaml/-/coc-yaml-1.0.0.tgz#0fd2981f831887f83e76bf42d13765bfb970c93a"
-  integrity sha512-JbNs7Y0+y4bbWsHPCxHfa7eOEZf1rq6tgtquIm3EEw9KMg9oaZ7yXS/QsuJ+NdUIINjEyRyCNOz2nfYR3LxUww==
+coc-yaml@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/coc-yaml/-/coc-yaml-1.0.1.tgz#67e047157b78d2820eb50590a6044526889cac5f"
+  integrity sha512-vHTHRJ6lnET3xVXwq2tmyFmw2+2gs3OJZkq27mAW+KV9+v59+QxzUME0oz/E5kD1fwkXnHo4BaYXVWuexHRKZQ==
   dependencies:
     tslib "^1.9.3"
-    vscode-languageserver "^5.1.0"
-    vscode-languageserver-protocol "^3.13.0"
+    vscode-languageserver "^5.2.1"
+    vscode-languageserver-protocol "^3.14.1"
     vscode-uri "^1.0.6"
-    yaml-language-server "^0.1.0"
+    yaml-language-server "^0.4.0"
 
 debug@3.1.0:
   version "3.1.0"
@@ -216,10 +216,10 @@ pify@^4.0.1:
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
-prettier@^1.14.3:
-  version "1.15.3"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.15.3.tgz#1feaac5bdd181237b54dbe65d874e02a1472786a"
-  integrity sha512-gAU9AGAPMaKb3NNSUUuhhFAS7SCO4ALTN4nRIn6PJ075Qd28Yn2Ig2ahEJWdJwJmlEBTUfC7mMUSFy8MwsOCfg==
+prettier@^1.15.2:
+  version "1.17.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.17.1.tgz#ed64b4e93e370cb8a25b9ef7fef3e4fd1c0995db"
+  integrity sha512-TzGRNvuUSmPgwivDqkZ9tM/qTGW9hqDKWOE9YHiyQdixlKbv7kvEqsmDPrcHJTKwthU774TQwZXVtaQ/mMsvjg==
 
 request-light@^0.2.3, request-light@^0.2.4:
   version "0.2.4"
@@ -313,7 +313,7 @@ vscode-languageserver-protocol@3.13.0, vscode-languageserver-protocol@^3.10.3, v
     vscode-jsonrpc "^4.0.0"
     vscode-languageserver-types "3.13.0"
 
-vscode-languageserver-protocol@3.14.1:
+vscode-languageserver-protocol@3.14.1, vscode-languageserver-protocol@^3.14.1:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.14.1.tgz#b8aab6afae2849c84a8983d39a1cf742417afe2f"
   integrity sha512-IL66BLb2g20uIKog5Y2dQ0IiigW0XKrvmWiOvc0yXw80z3tMEzEnHjaGAb3ENuU7MnQqgnYJ1Cl2l9RvNgDi4g==
@@ -365,11 +365,6 @@ vscode-nls@^4.0.0:
   resolved "https://widen.jfrog.io/widen/api/npm/npm-virtual/vscode-nls/-/vscode-nls-4.0.0.tgz#4001c8a6caba5cedb23a9c5ce1090395c0e44002"
   integrity sha1-QAHIpsq6XO2yOpxc4QkDlcDkQAI=
 
-vscode-uri@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/vscode-uri/-/vscode-uri-1.0.3.tgz#631bdbf716dccab0e65291a8dc25c23232085a52"
-  integrity sha1-Yxvb9xbcyrDmUpGo3CXCMjIIWlI=
-
 vscode-uri@^1.0.3, vscode-uri@^1.0.5, vscode-uri@^1.0.6:
   version "1.0.6"
   resolved "https://widen.jfrog.io/widen/api/npm/npm-virtual/vscode-uri/-/vscode-uri-1.0.6.tgz#6b8f141b0bbc44ad7b07e94f82f168ac7608ad4d"
@@ -382,23 +377,23 @@ which@^1.3.1:
   dependencies:
     isexe "^2.0.0"
 
-yaml-ast-parser@0.0.40:
-  version "0.0.40"
-  resolved "https://registry.yarnpkg.com/yaml-ast-parser/-/yaml-ast-parser-0.0.40.tgz#08536d4e73d322b1c9ce207ab8dd70e04d20ae6e"
-  integrity sha1-CFNtTnPTIrHJziB6uN1w4E0grm4=
+yaml-ast-parser-custom-tags@0.0.43:
+  version "0.0.43"
+  resolved "https://registry.yarnpkg.com/yaml-ast-parser-custom-tags/-/yaml-ast-parser-custom-tags-0.0.43.tgz#46968145ce4e24cb03c3312057f0f141b93a7d02"
+  integrity sha512-R5063FF/JSAN6qXCmylwjt9PcDH6M0ExEme/nJBzLspc6FJDmHHIqM7xh2WfEmsTJqClF79A9VkXjkAqmZw9SQ==
 
-yaml-language-server@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/yaml-language-server/-/yaml-language-server-0.1.0.tgz#ab3aff5c601ae33e03dc08c0960fd7c70296e635"
-  integrity sha512-2sA9eMgBnvEnjcQVIxbakIkiL8PQ6xJw1yXfdiVRn8ms+dI3EuaaatoUuIPhYnwmDOeaobDwkJs1bpQvFO4nqQ==
+yaml-language-server@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/yaml-language-server/-/yaml-language-server-0.4.0.tgz#1351c4b1bc8349e71b032b4330cab988493231c6"
+  integrity sha512-56lPsjm/O0a2i2Jeo6P7xLB0WswU/gVFVapt285MBi8ojs3qKb5evFpC4WzteCUnCyvwUydfmGKld3GVRQX1uA==
   dependencies:
     js-yaml "^3.12.0"
     jsonc-parser "^1.0.3"
-    prettier "^1.14.3"
+    prettier "^1.15.2"
     request-light "^0.2.3"
     vscode-json-languageservice "3.0.12"
     vscode-languageserver "^4.0.0"
     vscode-languageserver-types "^3.6.1"
     vscode-nls "^3.2.2"
-    vscode-uri "1.0.3"
-    yaml-ast-parser "0.0.40"
+    vscode-uri "^1.0.6"
+    yaml-ast-parser-custom-tags "0.0.43"
