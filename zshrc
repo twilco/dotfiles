@@ -76,6 +76,24 @@ RPROMPT=''
 
 source ~/.zsh/zsh-git-prompt/zshrc.sh
 source ~/.zsh/zsh-autosuggestion/zsh-autosuggestions.zsh
+# enable vi mode
+# https://dougblack.io/words/zsh-vi-mode.html
+bindkey -v
+
+# reduce NORMAL <-> INSERT transition from 0.4 sec default to 0.1 sec
+export KEYTIMEOUT=1
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+# shows interactive list of previous commands
+bindkey '^r' history-incremental-search-backward
+
+bindkey '^w' backward-kill-word
+
+# makes backspace work after returning from NORMAL mode
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+
 # ctrl + space to accept suggestion
 bindkey '^ ' autosuggest-accept
 # ctrl + enter to accept and execute suggestion - https://github.com/zsh-users/zsh-autosuggestions/issues/255
