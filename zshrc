@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$PATH:/bin:/usr/bin
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+# For GTK+3
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/$USER/.oh-my-zsh
