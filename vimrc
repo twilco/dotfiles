@@ -245,8 +245,6 @@ set nojoinspaces
 " use 4 spaces to represent tab
 set tabstop=2
 set softtabstop=2
-" number of spaces to use for auto indent
-set shiftwidth=2
 
 """" File formats and encodings
 set encoding=utf-8
