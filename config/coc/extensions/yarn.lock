@@ -16,15 +16,10 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
-coc-css@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/coc-css/-/coc-css-1.0.6.tgz#c8be03c0cded1753c354940a4da6bff372b1fe61"
-  integrity sha512-+ohStpV7LeRMs4uVJtSWhx+6cZODLj3zFAUz4Patg/5c9RZGeMe7GZ+U7q9NDYL/u5J8ocNFHayoi2Dnio6joQ==
-  dependencies:
-    tslib "^1.9.3"
-    vscode-css-languageservice "^3.0.12"
-    vscode-languageserver "^5.1.0"
-    vscode-languageserver-protocol "^3.13.0"
+coc-css@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/coc-css/-/coc-css-1.2.2.tgz#9b62ac96a9db8c687396ab4648c0c67dc3897a2f"
+  integrity sha512-JvZnKZZJZemS70o972OEjfnMGGO2sLpJA3iX1OT3CXmaymPb8CmufboyCVnzGMDMbFL/qHgfjbdw9kOg5ZtzzQ==
 
 coc-html@^1.0.7:
   version "1.0.7"
@@ -254,14 +249,6 @@ typescript@^3.2.2:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.1.tgz#b6691be11a881ffa9a05765a205cb7383f3b63c6"
   integrity sha512-3NSMb2VzDQm8oBTLH6Nj55VVtUEpe/rgkIzMir0qVoLyjDZlnMBva0U6vDiV3IH+sl/Yu6oP5QwsAQtHPmDd2Q==
-
-vscode-css-languageservice@^3.0.12:
-  version "3.0.12"
-  resolved "https://widen.jfrog.io/widen/api/npm/npm-virtual/vscode-css-languageservice/-/vscode-css-languageservice-3.0.12.tgz#fb4aac5ae3c5b761b1db1d7224b78ff824284dc3"
-  integrity sha1-+0qsWuPFt2Gx2x1yJLeP+CQoTcM=
-  dependencies:
-    vscode-languageserver-types "^3.13.0"
-    vscode-nls "^4.0.0"
 
 vscode-css-languageservice@^3.0.13-next.3:
   version "3.0.13"

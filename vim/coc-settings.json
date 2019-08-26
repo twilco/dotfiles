@@ -5,5 +5,13 @@
   "coc.source.dictionary.enable": false,
   "coc.source.tag.enable": false,
   "coc.source.word.enable": false,
-  "coc.preferences.noselect": false
+  "coc.preferences.noselect": false,
+  "coc.preferences.timeout": 5000,
+  "languageserver": {
+    "rust": {
+      "command": "ra_lsp_server",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    }
+  }
 }

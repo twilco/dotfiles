@@ -1,4 +1,3 @@
-""" Startup
 " use space as our leader
 let mapleader="\<Space>" 
 
@@ -16,6 +15,8 @@ elseif has('win32') || has('win32unix') || has('win64')
     call plug#begin('~/vimfiles/bundle')
 endif
 
+ " autocomplete for brackets, parens, etc.
+" Plug 'Raimondi/delimitMate'
 " syntax highlighting for markdown
 Plug 'gabrielelana/vim-markdown'
 " fixes focus events from within tmux
@@ -31,8 +32,10 @@ Plug 'itchyny/lightline.vim'
 " elixir 
 Plug 'slashmili/alchemist.vim'
 Plug 'elixir-editors/vim-elixir'
-" completion engine
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+" rust
+Plug 'rust-lang/rust.vim'
+" autocomplete.  trying out deoplete for now.
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 " color scheme
 Plug 'tomasiser/vim-code-dark'
 " plugin for git
@@ -74,6 +77,23 @@ Plug 'tpope/vim-sleuth'
 " The vim-surround plugin allows one to add, change or delete surrounding pairs.
 Plug 'tpope/vim-surround'
 
+" Deoplete
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
+if has('win32') || has('win64')
+  Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
+else
+  Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+endif
+" End Deoplete
+
 call plug#end()
 
 """" Plugin settings
@@ -84,6 +104,7 @@ augroup finalcountdown
  au!
  autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'quickfix' |q|endif
  " autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) || &buftype == 'quickfix' | q | endif
+ " press hyphen to open netrw in current dir
  nmap - :Lexplore<cr>
  " nmap - :NERDTreeToggle<cr>
 augroup END
@@ -256,8 +277,8 @@ nmap <leader>w :w<CR>
 nnoremap <leader>r :OverCommandLine<CR> %s/<Paste>
 
 " <leader>s for Rg search
-noremap <leader>s :Rg
-let g:fzf_layout = { 'down': '~20%' }
+noremap <leader>s :Rg 
+let g:fzf_layout = { 'down': '~40%' }
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
@@ -274,24 +295,19 @@ command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, {'source': s:list_cmd(),
   \                               'options': '--tiebreak=index'}, <bang>0)
 
-"" COC key remappings
+"" Autocomplete key remappings
 " use <tab> for trigger completion and navigate next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-" allow <S-Tab> to navigate coc completions backwards
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" use enter to confirm complete
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+" use tab to confirm complete
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<cr>"
 " close preview when completion is done
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-"" End COC key remappings
+"" End autocomplete key remappings
 
 " make searches always appear in center of page
 nnoremap n nzz
@@ -307,6 +323,9 @@ nnoremap g# g#zz
 autocmd InsertLeave * set nopaste
 
 """" Miscellaneous settings
+" in popup menu, automatically select the first item in the menu, but do not
+" insert it
+set completeopt=menu,noinsert
 " minimal automatic indenting for any file type
 set autoindent 
 " shows line numbers relative to your current line number
