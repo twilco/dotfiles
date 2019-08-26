@@ -16,7 +16,9 @@ elseif has('win32') || has('win32unix') || has('win64')
 endif
 
  " autocomplete for brackets, parens, etc.
-" Plug 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate'
+" automatically insert a linebreak and tab-in after '{' char
+inoremap {<CR> {<CR>} <C-o>O
 " syntax highlighting for markdown
 Plug 'gabrielelana/vim-markdown'
 " fixes focus events from within tmux
