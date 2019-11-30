@@ -5,7 +5,7 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/$USER/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 export NO_HEADLESS=1
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -77,7 +77,7 @@ PROMPT='%F{green}${NEWLINE}%D{%r} %f%F{yellow}%n%f $(git_super_status)%f%F{magen
 RPROMPT=''
 
 source ~/.zsh/zsh-git-prompt/zshrc.sh
-source ~/.zsh/zsh-autosuggestion/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # enable vi mode
 # https://dougblack.io/words/zsh-vi-mode.html
 bindkey -v
