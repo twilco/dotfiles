@@ -17,7 +17,7 @@
     ~/.vimrc: vimrc
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
-    ~/.xmodmap: xmodmap
+    ~/.Xmodmap: Xmodmap
     ~/.xinitrc: xinitrc
 
 - shell:
