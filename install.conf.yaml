@@ -17,6 +17,8 @@
     ~/.vimrc: vimrc
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
+    ~/.xmodmap: xmodmap
+    ~/.xinitrc: xinitrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
