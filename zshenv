@@ -51,6 +51,12 @@ alias gcoh='git checkout HEAD'
 alias gslp='git stash && git pull && git stash pop'
 # pushes branch upstream and then opens PR URL in browser
 alias gprsup='open $(git push --set-upstream origin $(git_current_branch) 2>&1 | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*")'
+alias grbc='git rebase --continue'
+alias grbi='interactive_rebase_from_head'
+
+function interactive_rebase_from_head() {
+  git rebase -i HEAD~$1
+}
 
 # docker
 # --------------------------------
