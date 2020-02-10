@@ -24,7 +24,7 @@ Plug 'gabrielelana/vim-markdown'
 " fixes focus events from within tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
 " asynchronous code linting
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 " ALE indicators for lightline
 Plug 'maximbaz/lightline-ale'
 " support vim's modeline in a secure way
@@ -32,8 +32,8 @@ Plug 'ciaranm/securemodelines'
 " bottom status bar
 Plug 'itchyny/lightline.vim'
 " elixir 
-Plug 'slashmili/alchemist.vim'
-Plug 'elixir-editors/vim-elixir'
+" Plug 'slashmili/alchemist.vim'
+" Plug 'elixir-editors/vim-elixir'
 " rust
 Plug 'rust-lang/rust.vim'
 " autocomplete.  trying out deoplete for now.
