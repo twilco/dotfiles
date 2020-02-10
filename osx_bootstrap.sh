@@ -62,6 +62,7 @@ echo "Changing default shell to zsh - will need to restart the computer for this
 chsh -s /bin/zsh
 
 PACKAGES=(
+    autojump
     curl
     diff-so-fancy
     fd
