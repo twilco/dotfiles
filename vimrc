@@ -17,6 +17,8 @@ endif
 
  " autocomplete for brackets, parens, etc.
 Plug 'Raimondi/delimitMate'
+" wraps args inside parens/brackets
+Plug 'git@github.com:FooSoft/vim-argwrap.git'
 " automatically insert a linebreak and tab-in after '{' char
 " inoremap {<CR> {<CR>} <C-o>O
 " syntax highlighting for markdown
@@ -256,6 +258,9 @@ inoremap jk <esc>
 
 " ; as :
 nnoremap ; :
+
+" For the Argwrap plugin
+nnoremap <silent> <leader>a :ArgWrap<CR>
 
 " easier split navigation - instead of ctrl-w and then j, it's just ctrl-j
 nnoremap <C-J> <C-W><C-J>
