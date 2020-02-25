@@ -3,6 +3,8 @@ export FZF_DEFAULT_COMMAND='fd --type file --follow'
 export FZF_CTRL_T_COMMAND='fd --type file --follow'
 export RISCV_OPENOCD_PATH="$HOME/usys/riscv/riscv-openocd-0.10.0-2019.02.0-x86_64-apple-darwin"
 export RISCV_PATH="$HOME/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin"
+# export DEP_SERVO_STYLE_CRATE_OUT_DIR="$HOME/projects/servo/generated_style"
+# export OUT_DIR="$HOME/projects/servo/out_dir"
 
 # random
 # --------------------------------
@@ -45,6 +47,7 @@ alias .4='cd ../../../../'
 
 # git
 # --------------------------------
+# Most of these can probably be moved to the more standard ~/.gitconfig file.
 alias gmff='git merge'
 alias gm='git merge --no-ff'
 alias gcoh='git checkout HEAD'
@@ -52,8 +55,10 @@ alias gslp='git stash && git pull && git stash pop'
 # pushes branch upstream and then opens PR URL in browser
 alias gprsup='open $(git push --set-upstream origin $(git_current_branch) 2>&1 | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*")'
 alias grbc='git rebase --continue'
-alias grbi='interactive_rebase_from_head'
+alias gap='git add -p'
+alias gds='git diff --staged'
 
+alias grbi='interactive_rebase_from_head'
 function interactive_rebase_from_head() {
   git rebase -i HEAD~$1
 }
