@@ -38,8 +38,9 @@ Plug 'itchyny/lightline.vim'
 " Plug 'elixir-editors/vim-elixir'
 " rust
 Plug 'rust-lang/rust.vim'
-" autocomplete.  trying out deoplete for now.
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+" autocomplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+set updatetime=200
 " color scheme
 Plug 'tomasiser/vim-code-dark'
 " plugin for git
@@ -82,20 +83,20 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 
 " Deoplete
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+" let g:deoplete#enable_at_startup = 1
 
-if has('win32') || has('win64')
-  Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
-else
-  Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-endif
+" if has('win32') || has('win64')
+"   Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
+" else
+"   Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+" endif
 " End Deoplete
 
 call plug#end()
