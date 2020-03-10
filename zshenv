@@ -1,6 +1,4 @@
 # env variables
-export FZF_DEFAULT_COMMAND='fd --type file --follow'
-export FZF_CTRL_T_COMMAND='fd --type file --follow'
 export RISCV_OPENOCD_PATH="$HOME/usys/riscv/riscv-openocd-0.10.0-2019.02.0-x86_64-apple-darwin"
 export RISCV_PATH="$HOME/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin"
 # export DEP_SERVO_STYLE_CRATE_OUT_DIR="$HOME/projects/servo/generated_style"
@@ -11,6 +9,13 @@ export RISCV_PATH="$HOME/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_
 alias mdkir='mkdir'
 alias sg='sr google'
 alias reloadshell='exec $SHELL -l'
+
+# fzf
+# --------------------------------
+alias vf='v -o $(fzf --height=70% --preview="bat {}" --preview-window=right:60%:wrap)'
+# export fzf_preview_pane_opts='--height=70% --preview="bat {}" --preview-window=right:60%:wrap'
+export FZF_DEFAULT_COMMAND='rg --files --follow'
+export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
 
 # riscv
 # --------------------------------
@@ -24,7 +29,7 @@ alias rvnm='~/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-da
 # ls
 # --------------------------------
 ### Colorize the ls output
-alias ls='ls -G'
+alias ls='ls -G --color'
 ### Use a long listing format
 alias ll='ls -la'
 ### Show hidden files
