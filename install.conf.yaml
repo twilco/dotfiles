@@ -12,6 +12,7 @@
     ~/.hyper.js: hyper.js
     ~/.ideavimrc: ideavimrc
     ~/Library/Application\ Support/Code/User: vscode
+    ~/.subversion/config: .subversion/config
     ~/.tmux.conf: tmux.conf
     ~/.vim: vim
     ~/.vimrc: vimrc
