@@ -40,7 +40,13 @@ Plug 'itchyny/lightline.vim'
 Plug 'rust-lang/rust.vim'
 " autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" These settings are here because they were suggested by the coc README.
 set updatetime=200
+" Give more space for displaying messages.
+set cmdheight=2
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 " color scheme
 Plug 'tomasiser/vim-code-dark'
 " plugin for git
