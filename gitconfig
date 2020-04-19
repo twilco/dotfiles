@@ -6,6 +6,7 @@ email = tyler.l.wilcock@gmail.com
 autocrlf = input
 trustctime = false
 excludesfile = ~/.dotfiles/.gitignore_global
+editor = nvim
 
 [color]
 ui = true
