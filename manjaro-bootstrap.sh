@@ -78,6 +78,11 @@ touch ~/.zshenv-secret
 echo "Installing Tmux plugin manager."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+echo "Installing Proton VPN CLI client and its dependencies (openvpn dialog python-pip python-setuptools)"
+sudo pacman -S openvpn dialog python-pip python-setuptools
+sudo pip3 install protonvpn-cli
+sudo protonvpn init
+
 echo "Installing dependencies necessary to build WebKit (and other general systems-programming projects)."
 yay -S apache-mod_bw ruby-json ruby-highline
 sudo pacman -S cmake ccache gobject-introspection gperf ninja
@@ -104,6 +109,9 @@ echo "https://wiki.archlinux.org/index.php/Sysctl#Configuration"
 echo "Add 'fs.inotify.max_user_watches = 524288' to a new '/etc/sysctl.d/99-sysctl.conf' file."
 echo "Run 'sysctl -p /etc/sysctl.d/99-sysctl.conf'"
 echo "You may also want to increase the heap size of your IDEs after installation."
+echo ""
+
+echo "Follow this guide to configure ProtonVPN to autoconnect at boot: https://github.com/ProtonVPN/linux-cli/blob/master/USAGE.md#via-systemd-service"
 echo ""
 
 echo "All done.  Restart your computer."
