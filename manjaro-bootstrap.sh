@@ -65,7 +65,7 @@ rustup install stable nightly
 echo "Installing Python 2 and 3."
 sudo pacman -S python2 python3
 
-yay -S gdb ripgrep xclip scrot
+yay -S valgrind gdb ripgrep xclip scrot
 
 echo "Installing autojump."
 git clone git://github.com/wting/autojump.git ~/projects/autojump
@@ -87,6 +87,9 @@ echo "Installing dependencies necessary to build WebKit (and other general syste
 yay -S apache-mod_bw ruby-json ruby-highline
 sudo pacman -S cmake ccache gobject-introspection gperf ninja
 ccache --max-size=8G
+
+echo "Installing BOINC."
+yay -S boinc
 
 echo "Install via Pamac: xcape and xmodmap to turn caps lock into 'escape' if pressed alone, or 'control' if pressed with another key."
 echo "Install via Pamac: tmux"
