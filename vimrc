@@ -252,8 +252,11 @@ set whichwrap+=<,>,h,l
 set nowrap
 set nojoinspaces
 " use 4 spaces to represent tab
-set tabstop=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+" turns tabs into spaces
+set expandtab 
 
 """" File formats and encodings
 set encoding=utf-8
@@ -349,8 +352,6 @@ set numberwidth=6
 set ruler 
 " enable syntax processing
 syntax on 
-" turns tabs into spaces
-set expandtab 
 " shows last command in bottom right command bar
 set showcmd 
 " show matching parentheses, bracket, etc, when highlighting over one
