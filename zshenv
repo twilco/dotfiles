@@ -94,27 +94,6 @@ alias ag='ansible-galaxy -r install roles/requirements.yml --force'
 alias gir='./gradlew idea --refresh-dependencies'
 alias gi='./gradlew idea'
 
-# widen
-# --------------------------------
-alias wcom='~/scripts/print-widen-commit-syntax.sh'
-alias gcah='git checkout HEAD .idea/modules.xml && git checkout HEAD .idea/runConfigurations/* && git checkout HEAD .idea/vcs.xml && git checkout HEAD .idea/codeStyles/Project.xml && git checkout HEAD web/package-lock.json'
-alias npmbd='cd web && npm run build-dev && cd ..'
-alias fix-patterns='rm -r node_modules/npm'
-alias dgir='./gradlew idea --refresh-dependencies && nvm use 6 && ./js.sh'
-alias kdploy='function kdploy() { helm list | rg $1 | awk '{print $1}' | xargs helm delete --purge }'
-### build all lannister lambdas 
-alias lnba='./gradlew :lannister-lambda:accountworker:lambdaZip :lannister-lambda:billableaccounts:lambdaZip :lannister-lambda:integrationtest:lambdaZip'
-### upload all lannister lambdas to S3
-alias lnua='aws s3 cp ~/projects/lannister/lambda/accountworker/build/distributions/accountworker-LATEST.zip s3://widen-stage-lannister-lambdas --profile stage && aws s3 cp ~/projects/lannister/lambda/billableaccounts/build/distributions/billableaccounts-LATEST.zip s3://widen-stage-lannister-lambdas --profile stage && aws s3 cp ~/projects/lannister/lambda/integrationtest/build/distributions/integrationtest-LATEST.zip s3://widen-stage-lannister-lambdas --profile stage'
-### publish lambda code stored in S3 to actual lambda function
-alias lnpa='aws lambda update-function-code --function-name lannister-stage-billable-accounts-lambda --s3-bucket widen-stage-lannister-lambdas --s3-key billableaccounts-LATEST.zip --publish --profile stage && aws lambda update-function-code --function-name lannister-stage-account-worker-lambda --s3-bucket widen-stage-lannister-lambdas --s3-key accountworker-LATEST.zip --publish --profile stage && aws lambda update-function-code --function-name lannister-stage-integration-test-lambda --s3-bucket widen-stage-lannister-lambdas --s3-key integrationtest-LATEST.zip --publish --profile stage'
-### build all lambdas, then upload them to S3, then publish the code to the actual lambda from S3
-alias lnla='lnba && lambda/deploy-lambdas-stage-from-local.sh'
-
-alias prod-lnua='aws s3 cp ~/projects/lannister/lambda/accountworker/build/distributions/accountworker-LATEST.zip s3://widen-prod-lannister-lambdas --profile prod && aws s3 cp ~/projects/lannister/lambda/billableaccounts/build/distributions/billableaccounts-LATEST.zip s3://widen-prod-lannister-lambdas --profile prod && aws s3 cp ~/projects/lannister/lambda/integrationtest/build/distributions/integrationtest-LATEST.zip s3://widen-prod-lannister-lambdas --profile prod'
-alias prod-lnpa='aws lambda update-function-code --function-name lannister-prod-billable-accounts-lambda --s3-bucket widen-prod-lannister-lambdas --s3-key billableaccounts-LATEST.zip --publish --profile prod && aws lambda update-function-code --function-name lannister-prod-account-worker-lambda --s3-bucket widen-prod-lannister-lambdas --s3-key accountworker-LATEST.zip --publish --profile prod && aws lambda update-function-code --function-name lannister-prod-integration-test-lambda --s3-bucket widen-prod-lannister-lambdas --s3-key integrationtest-LATEST.zip --publish --profile prod'
-alias prod-lnla='lnba && lambda/deploy-lambdas-prod-from-local.sh'
-
 # elasticsearch
 #---------------------------------
 alias pull-es-docker='docker pull docker.elastic.co/elasticsearch/elasticsearch:5.5.2'
