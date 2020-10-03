@@ -2,12 +2,16 @@ define hook-stop
 refresh
 end
 
+define sb
+save breakpoints gdb-breakpoints.txt
+end
+
 target remote localhost:8080
 refresh
 
 # Try to reload breakpoints from the current directory (if we saved any last debug session).
 set breakpoint pending on
-source breakpoints.txt
+source gdb-breakpoints.txt
 
 set history filename ~/.gdb_history
 set history save on
