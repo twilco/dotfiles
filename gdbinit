@@ -1,5 +1,6 @@
 define hook-stop
 refresh
+sb
 end
 
 define sb
