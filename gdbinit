@@ -7,6 +7,10 @@ define sb
 save breakpoints gdb-breakpoints.txt
 end
 
+define dps
+delete breakpoints
+end
+
 target remote localhost:8080
 refresh
 
