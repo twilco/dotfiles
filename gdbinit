@@ -2,6 +2,14 @@ define hook-stop
 refresh
 end
 
+define dbps
+delete breakpoints
+end
+
+define sbps
+save breakpoints breakpoints.txt
+end
+
 target remote localhost:8080
 refresh
 
