@@ -96,9 +96,7 @@ echo "Installing cask..."
 brew install caskroom/cask/brew-cask
 
 CASKS=(
-    alacritty
-    alfred
-    dropbox
+    alfred 
     firefox
     flux
     google-chrome
@@ -111,8 +109,6 @@ CASKS=(
     slack
     spectacle
     spotify
-    vagrant
-    vagrant-manager
     visual-studio-code
     virtualbox
     vlc
