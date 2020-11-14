@@ -1,0 +1,7 @@
+target remote localhost:8080
+
+python
+import sys
+sys.path.insert(0, "/home/twilco/projects/webkit/Tools/gdb/")
+import webkit
+

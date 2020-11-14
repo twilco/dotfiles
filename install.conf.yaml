@@ -8,6 +8,8 @@
 - link:
     ~/.config: config
     ~/.gdbinit: gdbinit
+    ~/projects/chromium/src/.gdbinit: gdbInitChromium
+    ~/projects/webkit/.gdbinit: gdbInitWebKit
     ~/.gitconfig: gitconfig
     ~/.hyper.js: hyper.js
     ~/.ideavimrc: ideavimrc

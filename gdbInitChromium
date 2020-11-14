@@ -1,0 +1,3 @@
+# https://chromium.googlesource.com/chromium/src/+/master/docs/gdbinit.md
+source /home/twilco/projects/chromium/src/tools/gdb/gdbinit
+
