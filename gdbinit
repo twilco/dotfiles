@@ -1,17 +1,16 @@
 define hook-stop
 refresh
-sb
+sbs
 end
 
-define sb
+define sbs
 save breakpoints gdb-breakpoints.txt
 end
 
-define dps
+define dbs
 delete breakpoints
 end
 
-target remote localhost:8080
 refresh
 
 # Try to reload breakpoints from the current directory (if we saved any last debug session).
