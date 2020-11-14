@@ -1,16 +1,16 @@
-define hook-stop
-refresh
-end
-
-define dbps
+define dbs
 delete breakpoints
 end
 
-define sbps
+define sbs
 save breakpoints breakpoints.txt
 end
 
-target remote localhost:8080
+define hook-stop
+refresh
+sbs
+end
+
 refresh
 
 # Try to reload breakpoints from the current directory (if we saved any last debug session).
