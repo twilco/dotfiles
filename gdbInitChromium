@@ -1,3 +1,9 @@
 # https://chromium.googlesource.com/chromium/src/+/master/docs/gdbinit.md
 source /home/twilco/projects/chromium/src/tools/gdb/gdbinit
 
+# https://chromium.googlesource.com/chromium/src/+/81c0fc6d4/docs/linux_debugging.md#printing-chromium-types
+python
+import sys
+sys.path.insert(0, "/home/twilco/projects/chromium/src/tools/gdb/")
+import gdb_chrome
+

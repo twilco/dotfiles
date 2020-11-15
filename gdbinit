@@ -1,3 +1,6 @@
+add-auto-load-safe-path /home/twilco/projects/dotfiles/gdbInitChromium
+add-auto-load-safe-path /home/twilco/projects/dotfiles/gdbInitWebKit
+
 define dbs
 delete breakpoints
 end
