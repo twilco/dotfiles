@@ -9,6 +9,7 @@
     ~/.config: config
     ~/.gdbinit: gdbinit
     ~/projects/chromium/src/.gdbinit: gdbInitChromium
+    ~/projects/servo/.gdbinit: gdbInitServo
     ~/projects/webkit/.gdbinit: gdbInitWebKit
     ~/.gitconfig: gitconfig
     ~/.hyper.js: hyper.js
