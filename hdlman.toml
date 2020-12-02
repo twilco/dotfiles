@@ -1,0 +1,2 @@
+default-target = "ecp5-85k"
+default-dev-board = "ulx3s"

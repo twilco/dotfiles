@@ -12,6 +12,7 @@
     ~/projects/servo/.gdbinit: gdbInitServo
     ~/projects/webkit/.gdbinit: gdbInitWebKit
     ~/.gitconfig: gitconfig
+    ~/.hdlman.toml: hdlman.toml
     ~/.hyper.js: hyper.js
     ~/.ideavimrc: ideavimrc
     ~/Library/Application\ Support/Code/User: vscode
