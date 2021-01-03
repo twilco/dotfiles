@@ -1,6 +1,6 @@
 python
 import sys
-sys.path.insert(0, '/home/twilco/projects/servo/src/etc')
+sys.path.insert(0, '/home/twilco/projects/servo/etc')
 import servo_gdb
 servo_gdb.register_printers(None)
 end
