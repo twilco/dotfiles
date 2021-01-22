@@ -2,11 +2,11 @@ add-auto-load-safe-path /home/twilco/projects/dotfiles/gdbInitChromium
 add-auto-load-safe-path /home/twilco/projects/dotfiles/gdbInitServo
 add-auto-load-safe-path /home/twilco/projects/dotfiles/gdbInitWebKit
 
-define dbs
+define dbps
 delete breakpoints
 end
 
-define sbs
+define sbps
 save breakpoints breakpoints.txt
 end
 
@@ -24,6 +24,9 @@ source breakpoints.txt
 set history filename ~/.gdb_history
 set history save on
 set history size 10000
+
+# Log GDB output to file.
+set logging on
 
 # Pretty print structs and arrays.
 set print pretty on
