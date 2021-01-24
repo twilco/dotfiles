@@ -12,7 +12,7 @@ end
 
 define hook-stop
 refresh
-sbs
+sbps
 end
 
 refresh
