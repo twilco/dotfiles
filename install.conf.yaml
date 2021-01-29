@@ -24,6 +24,7 @@
     ~/.zshrc: zshrc
     ~/.Xmodmap: Xmodmap
     ~/.xinitrc: xinitrc
+    /usr/bin/trap-webprocess: trap-webprocess.sh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
