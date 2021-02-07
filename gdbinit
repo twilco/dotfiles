@@ -17,6 +17,9 @@ end
 
 refresh
 
+# Disable confirmation requests.
+set confirm off
+
 # Try to reload breakpoints from the current directory (if we saved any last debug session).
 set breakpoint pending on
 source breakpoints.txt
