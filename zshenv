@@ -4,6 +4,7 @@ export RISCV_PATH="$HOME/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_
 export EMAIL_ADDRESS="twilco.o@protonmail.com"
 export CHANGE_LOG_NAME="Tyler Wilcock"
 export EDITOR=nvim
+export CCACHE_BASEDIR=/home/twilco/projects
 # export DEP_SERVO_STYLE_CRATE_OUT_DIR="$HOME/projects/servo/generated_style"
 # export OUT_DIR="$HOME/projects/servo/out_dir"
 
