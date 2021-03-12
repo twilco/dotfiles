@@ -5,8 +5,6 @@ export EMAIL_ADDRESS="twilco.o@protonmail.com"
 export CHANGE_LOG_NAME="Tyler Wilcock"
 export EDITOR=nvim
 export CCACHE_BASEDIR=/home/twilco/projects
-# export DEP_SERVO_STYLE_CRATE_OUT_DIR="$HOME/projects/servo/generated_style"
-# export OUT_DIR="$HOME/projects/servo/out_dir"
 
 # random
 # --------------------------------
@@ -89,19 +87,10 @@ function dockersh() {
   docker exec -it $1 /bin/bash
 }
 
-# ansible
-# --------------------------------
-alias ag='ansible-galaxy -r install roles/requirements.yml --force'
-
 # gradle
 # --------------------------------
 alias gir='./gradlew idea --refresh-dependencies'
 alias gi='./gradlew idea'
-
-# elasticsearch
-#---------------------------------
-alias pull-es-docker='docker pull docker.elastic.co/elasticsearch/elasticsearch:5.5.2'
-alias esdr='docker run -p 9200:9200 -e "http.host=0.0.0.0" -e "transport.host=127.0.0.1" docker.elastic.co/elasticsearch/elasticsearch:5.5.2'
 
 # rust
 #---------------------------------
