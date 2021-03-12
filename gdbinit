@@ -42,7 +42,7 @@ set print object on
 
 # Remove duplicate history entries up to 5 entries back from the most recent.
 # https://sourceware.org/gdb/onlinedocs/gdb/Command-History.html#Command-History
-set history remove-duplicates 5
+# set history remove-duplicates 5
 
 # These make gdb never pause in its output.
 # https://web.mit.edu/gnu/doc/html/gdb_16.html
