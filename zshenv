@@ -117,7 +117,6 @@ alias tkall='tmux kill-server'
 #---------------------------------
 alias v='nvim'
 
-
 # webkit
 #---------------------------------
 alias trw='trap-webprocess'
