@@ -55,15 +55,24 @@ alias .4='cd ../../../../'
 # git
 # --------------------------------
 # Most of these can probably be moved to the more standard ~/.gitconfig file.
+alias gap='git add -p'
+alias gcoh='git checkout HEAD'
+alias gds='git diff --staged'
 alias gmff='git merge'
 alias gm='git merge --no-ff'
-alias gcoh='git checkout HEAD'
+# Git show current branch
+alias gscb='git branch --show-current'
+
+# Pushes branch upstream and then opens PR in browser.
+if [ "$(uname 2> /dev/null)" != "Linux" ]; then
+    alias gprsup='open $(git push --set-upstream origin $(git branch --show-current) 2>&1 | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*")'
+else
+    alias gprsup='firefox $(git push --set-upstream origin $(git branch --show-current) 2>&1 | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*")'
+fi
+
+
 alias gslp='git stash && git pull && git stash pop'
-# pushes branch upstream and then opens PR URL in browser
-alias gprsup='open $(git push --set-upstream origin $(git_current_branch) 2>&1 | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*")'
 alias grbc='git rebase --continue'
-alias gap='git add -p'
-alias gds='git diff --staged'
 
 alias grbi='interactive_rebase_from_head'
 function interactive_rebase_from_head() {
