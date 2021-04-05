@@ -13,15 +13,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "Installing zsh-autosuggestions."
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
-echo "Installing zsh-git-prompt -- TODO: replace this with https://github.com/woefe/git-prompt.zsh which doesn't use Python and is therefore probably faster"
-git clone git@github.com:olivierverdier/zsh-git-prompt.git ~/.zsh/zsh-git-prompt
-echo "Fixing zsh-git-prompt color -- make changed files appear as yellow rather than blue."
-cp ~/projects/dotfiles/zsh-git-prompt-changed-files-yellow-instead-of-blue.patch ~/.zsh/zsh-git-prompt
-cd ~/.zsh/zsh-git-prompt
-git apply zsh-git-prompt-changed-files-yellow-instead-of-blue.patch
-rm zsh-git-prompt-changed-files-yellow-instead-of-blue.patch
-cd ~/projects/dotfiles
-
 echo "Create an SSH key and upload it to your GitHub so your dotfiles can be cloned.  Press anything when complete."
 echo "https://wiki.archlinux.org/index.php/SSH_keys"
 read -p ""

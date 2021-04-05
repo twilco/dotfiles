@@ -73,12 +73,13 @@ man() {
     man "$@"
 }
 
+source ~/projects/dotfiles/zsh-plugins/git-prompt/git-prompt.zsh
+source ~/projects/dotfiles/zsh-plugins/git-prompt/customized-prompt.zsh
 setopt prompt_subst
 NEWLINE=$'\n'
-PROMPT='%F{green}${NEWLINE}%D{%r} %f%F{yellow}%n%f $(git_super_status)%f%F{magenta}${NEWLINE}%~ %f%F{green}${NEWLINE}$%f '
+PROMPT='%F{green}${NEWLINE}%D{%r} %f%F{yellow}%n%f $(gitprompt)%f%F{magenta}${NEWLINE}%~ %f%F{green}${NEWLINE}$%f '
 RPROMPT=''
 
-source ~/.zsh/zsh-git-prompt/zshrc.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # enable vi mode
 # https://dougblack.io/words/zsh-vi-mode.html

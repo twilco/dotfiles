@@ -44,10 +44,6 @@ echo "Installing zsh"
 brew install zsh
 
 echo ""
-echo "Clone zsh git prompt repo"
-git clone https://github.com/twilco/zsh-git-prompt.git ~/.zsh/zsh-git-prompt
-
-echo ""
 echo "Clone zsh-autosuggestions repo"
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 

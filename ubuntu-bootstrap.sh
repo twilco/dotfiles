@@ -12,15 +12,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "Installing zsh-autosuggestions."
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
-echo "Installing zsh-git-prompt -- TODO: replace this with https://github.com/woefe/git-prompt.zsh which doesn't use Python and is therefore probably faster"
-git clone git@github.com:olivierverdier/zsh-git-prompt.git ~/.zsh/zsh-git-prompt
-echo "Fixing zsh-git-prompt color -- make changed files appear as yellow rather than blue."
-cp ~/projects/dotfiles/zsh-git-prompt-changed-files-yellow-instead-of-blue.patch ~/.zsh/zsh-git-prompt
-cd ~/.zsh/zsh-git-prompt
-git apply zsh-git-prompt-changed-files-yellow-instead-of-blue.patch
-rm zsh-git-prompt-changed-files-yellow-instead-of-blue.patch
-cd ~/projects/dotfiles
-
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 echo 'Reloading shell to make nvm available.'
 exec $SHELL -l
