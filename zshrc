@@ -137,7 +137,6 @@ export NVM_DIR="$HOME/.nvm"
 export GROOVY_HOME=/usr/local/Cellar/groovysdk/2.5.0/libexec
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/Cellar/terraform/0.11.7/bin/terraform terraform
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
