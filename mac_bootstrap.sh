@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Bootstrap script for setting up a new OSX machine
+# Bootstrap script for setting up a new Mac machine
 
 # Ask for credentials and cache sudo access for 5 minutes
 sudo -v
@@ -20,7 +20,7 @@ echo "Updating homebrew recipes"
 brew update
 
 echo ""
-echo "Installing GNU core utilities (those that come with OS X are outdated)"
+echo "Installing GNU core utilities"
 brew install coreutils
 brew install gnu-sed --with-default-names
 brew install gnu-tar --with-default-names
@@ -36,7 +36,7 @@ echo "Installing cpuinfo - take action to add this to the MacOS top menubar"
 brew cask install cpuinfo
 
 echo ""
-echo "Installing Bash 4"
+echo "Installing Bash"
 brew install bash
 
 echo ""
@@ -106,8 +106,6 @@ CASKS=(
     spectacle
     spotify
     visual-studio-code
-    virtualbox
-    vlc
 )
 
 echo ""
@@ -129,7 +127,7 @@ echo "Installing global npm packages..."
 npm install git -g
 
 echo ""
-echo "Configuring OSX..."
+echo "Configuring Mac settings..."
 
 echo ""
 echo "Showing hidden files in Finder by default"
@@ -190,11 +188,6 @@ defaults write com.apple.terminal StringEncodings -array 4
 #### Safari
 
 echo ""
-echo "Privacy: don’t send search queries to Apple"
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-
-echo ""
 echo "Enable Safari’s debug menu"
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
@@ -203,7 +196,7 @@ echo "Add a context menu item for showing the Web Inspector in web views"
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 echo ""
-echo "Remove useless icons from Safari’s bookmarks bar"
+echo "Remove non-useful icons from Safari’s bookmarks bar"
 defaults write com.apple.Safari ProxiesInBookmarksBar "()"
 
 echo ""
@@ -243,10 +236,6 @@ mkdir -p ~/Library/Application\ Support/Code/User/ && link ./vscode/settings.jso
 echo ""
 echo "Hard linking ./htoprc to ~/.config/htop/htoprc"
 mkdir -p ~/.config/htop/ && link ./htoprc ~/.config/htop/htoprc
-
-echo ""
-echo "Hard linking ./.hyper.js to ~/.hyper.js"
-link ./.hyper.js ~/.hyper.js
 
 echo "Bootstrapping complete"
 echo "NOTE: You will still need to configure MagicPrefs via the GUI."
