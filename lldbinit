@@ -1,0 +1,17 @@
+# This is a nice overview of LLDB syntax:
+# https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-basics.html
+
+command script import /home/twilco/projects/webkit/Tools/lldb/lldb_webkit.py
+
+# Set a breakpoint.
+# Example usage setting an unconditional breakpoint: bps CSSPropertyParser.cpp 84
+# Example usage setting an conditional breakpoint: bps CSSPropertyParser.cpp 84 -c 'valueID == CSSValueInherit'
+command alias bps breakpoint set --file %1 --line %2
+
+command alias bpd breakpoint delete --force
+
+# Write all breakpoints to file on every stop so they can reloaded later.
+target stop-hook add breakpoint write lldb-breakpoints
+
+# Read all written breakpoints on startup.
+breakpoint read lldb-breakpoints
