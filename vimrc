@@ -365,7 +365,12 @@ set autoread
 " prevent vim from trying to analyze too much when files have extremely long single lines
 set synmaxcol=500
 " No whitespace in vimdiff
-set diffopt+=iwhite 
+if &diff
+    " This if-statement is necessary to fix an error: E474: Invalid argument: diffopt+=iwhite
+    " https://www.micahsmith.com/blog/2019/11/fixing-vim-invalid-argument-diffopt-iwhite/
+    set diffopt-=internal
+    set diffopt+=iwhite
+endif
 
 """" Search settings
 " search as characters are entered, rather than when search is completed
