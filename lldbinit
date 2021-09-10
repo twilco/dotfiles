@@ -2,7 +2,9 @@
 # https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-basics.html
 # https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html
 
-command script import /home/twilco/projects/webkit/Tools/lldb/lldb_webkit.py
+command script import /Users/twilco/projects/web/OpenSource/Tools/lldb/lldb_webkit.py
+
+command alias wkd process attach -n com.apple.WebKit.WebContent.Development -w
 
 # Set a breakpoint.
 # Example usage setting an unconditional breakpoint: bps CSSPropertyParser.cpp 84
