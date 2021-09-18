@@ -92,20 +92,6 @@ echo "Installing cask apps..."
 brew cask install ${CASKS[@]}
 
 echo ""
-echo "Installing fonts..."
-brew tap caskroom/fonts
-FONTS=(
-    font-inconsolata
-    font-roboto
-    font-clear-sans
-)
-brew cask install ${FONTS[@]}
-
-echo ""
-echo "Installing global npm packages..."
-npm install git -g
-
-echo ""
 echo "Configuring Mac settings..."
 
 echo ""
@@ -175,10 +161,6 @@ echo "Add a context menu item for showing the Web Inspector in web views"
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 echo ""
-echo "Remove non-useful icons from Safari’s bookmarks bar"
-defaults write com.apple.Safari ProxiesInBookmarksBar "()"
-
-echo ""
 echo "Enable the Develop menu and the Web Inspector in Safari"
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
@@ -204,22 +186,9 @@ echo ""
 echo "Hard linking ./zshenv to ~/.zshenv"
 link ./.zshenv ~/.zshenv
 
-echo ""
-echo "Hard linking ./vscode/extensions.json to ~/.vscode/extensions.json"
-mkdir -p ~/.vscode/ && link ./vscode/extensions.json ~/.vscode/extensions.json
-
-echo ""
-echo "Hard linking ./vscode/settings.json to ~/Library/Application Support/Code/User/settings.json"
-mkdir -p ~/Library/Application\ Support/Code/User/ && link ./vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-
-echo ""
-echo "Hard linking ./htoprc to ~/.config/htop/htoprc"
-mkdir -p ~/.config/htop/ && link ./htoprc ~/.config/htop/htoprc
-
 echo "Bootstrapping complete"
 echo "NOTE: You will still need to configure MagicPrefs via the GUI."
 echo "NOTE: You will still need to install Meld, since that is what our .gitconfig uses as the difftool. http://meldmerge.org/"
-echo "NOTE: You will still need to install the Hack font (assuming you still use it).  https://support.apple.com/en-us/HT201749 <- install instructions, https://sourcefoundry.org/hack/ <- font download
 echo "NOTE: Review the entire output of this script to ensure no other action needs to be taken."
 echo "Once you have taken all necessary actions, restart your computer to make the changes take effect."
 
