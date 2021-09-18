@@ -20,26 +20,6 @@ echo "Updating homebrew recipes"
 brew update
 
 echo ""
-echo "Installing GNU core utilities"
-brew install coreutils
-brew install gnu-sed --with-default-names
-brew install gnu-tar --with-default-names
-brew install gnu-indent --with-default-names
-brew install gnu-which --with-default-names
-
-echo ""
-echo "Installing GNU find, locate, updatedb, and xargs, g-prefixed"
-brew install findutils
-
-echo ""
-echo "Installing cpuinfo - take action to add this to the MacOS top menubar"
-brew cask install cpuinfo
-
-echo ""
-echo "Installing Bash"
-brew install bash
-
-echo ""
 echo "Installing zsh"
 brew install zsh
 
