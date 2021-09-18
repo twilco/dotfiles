@@ -61,16 +61,7 @@ PACKAGES=(
     autojump
     curl
     diff-so-fancy
-    fd
-    ffmpeg
     git
-    hub
-    libjpeg
-    node
-    npm
-    python
-    python3
-    pypy
     ripgrep
     tmux
     tree
@@ -92,19 +83,7 @@ echo "Installing cask..."
 brew install caskroom/cask/brew-cask
 
 CASKS=(
-    alfred 
-    firefox
-    flux
-    google-chrome
-    gpgtools
-    java
-    jq
-    magicprefs
     neovim
-    ripgrep
-    slack
-    spectacle
-    spotify
     visual-studio-code
 )
 
