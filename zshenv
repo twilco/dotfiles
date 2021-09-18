@@ -1,10 +1,10 @@
 # env variables
-export RISCV_OPENOCD_PATH="$HOME/usys/riscv/riscv-openocd-0.10.0-2019.02.0-x86_64-apple-darwin"
-export RISCV_PATH="$HOME/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin"
-export EMAIL_ADDRESS="twilco.o@protonmail.com"
+export CCACHE_BASEDIR=/home/twilco/projects
 export CHANGE_LOG_NAME="Tyler Wilcock"
 export EDITOR=nvim
-export CCACHE_BASEDIR=/home/twilco/projects
+export EMAIL_ADDRESS="tyler_w@apple.com"
+export RISCV_OPENOCD_PATH="$HOME/usys/riscv/riscv-openocd-0.10.0-2019.02.0-x86_64-apple-darwin"
+export RISCV_PATH="$HOME/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-apple-darwin"
 
 # random
 # --------------------------------
@@ -100,6 +100,11 @@ function dockersh() {
 # --------------------------------
 alias gir='./gradlew idea --refresh-dependencies'
 alias gi='./gradlew idea'
+
+# lldb
+# --------------------------------
+alias patp='lldb process attach -p'
+alias patn='lldb process attach -n'
 
 # rust
 #---------------------------------
