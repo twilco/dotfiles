@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<script src="../../resources/js-test.js"></script>
+<script src="../../resources/accessibility-helper.js"></script>
+</head>
+<body>
+    
+<script>
+    description("This test ensures ")
+
+    if (window.accessibilityController) {
+        window.jsTestIsAsync = true;
+
+        window.containerElement = accessibilityController.accessibleElementById("SOME_ID");
+
+        setTimeout(async function() {
+            await waitFor(() => {
+
+            });
+
+            finishJSTest();
+        }, 0);
+    }
+</script>
+</body>
+</html>

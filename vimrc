@@ -270,6 +270,8 @@ scriptencoding utf-8
 " jk is escape
 inoremap jk <esc>
 
+nnoremap ,at :-1read ~/projects/dotfiles/snippets/axtest<CR>9jf)hi
+
 " ; as :
 nnoremap ; :
 
