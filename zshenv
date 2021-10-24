@@ -118,6 +118,8 @@ alias cr='cargo run'
 alias ct='cargo test'
 alias twas='cargo test --target wasm32-unknown-unknown'
 
+. "$HOME/.cargo/env"
+
 # tmux 
 #---------------------------------
 alias ta='tmux a'
@@ -134,3 +136,7 @@ alias v='nvim'
 # webkit
 #---------------------------------
 alias trw='trap-webprocess'
+alias md="make debug"
+alias mr="make release"
+alias rwkt="run-webkit-tests --no-build --no-retry"
+
