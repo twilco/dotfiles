@@ -62,6 +62,7 @@ alias gmff='git merge'
 alias gm='git merge --no-ff'
 # Git show current branch
 alias gscb='git branch --show-current'
+alias grm='git rebase $(git_main_branch)'
 
 # Pushes branch upstream and then opens PR in browser.
 if [ "$(uname 2> /dev/null)" != "Linux" ]; then
