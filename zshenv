@@ -140,5 +140,6 @@ alias trw='trap-webprocess'
 alias md="make debug"
 alias mr="make release"
 alias rwkt="run-webkit-tests --no-build --no-retry"
+alias rwkta="run-webkit-tests --no-build --no-retry --accessibility-isolated-tree"
 alias rcl="Tools/Scripts/resolve-ChangeLogs"
 alias wkp="Tools/Scripts/webkit-patch"
