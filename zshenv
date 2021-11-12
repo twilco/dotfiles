@@ -141,5 +141,19 @@ alias md="make debug"
 alias mr="make release"
 alias rwkt="run-webkit-tests --no-build --no-retry"
 alias rwkta="run-webkit-tests --no-build --no-retry --accessibility-isolated-tree"
+function run-all-webkit-test-configurations {
+    echo "---------------- WebKit2 NO ISOLATED TREE ----------------"
+    sleep 2
+    rwkt $*
+
+    echo "---------------- WebKit2 WITH ISOLATED TREE ----------------"
+    sleep 2
+    rwkta $*
+
+    echo "---------------- WebKit1 NO ISOLATED TREE ----------------"
+    sleep 2
+    rwkt -1 $*
+}
+alias rwktall="run-all-webkit-test-configurations"
 alias rcl="Tools/Scripts/resolve-ChangeLogs"
 alias wkp="Tools/Scripts/webkit-patch"
