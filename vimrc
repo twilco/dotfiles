@@ -271,6 +271,8 @@ scriptencoding utf-8
 inoremap jk <esc>
 
 nnoremap ,at :-1read ~/projects/dotfiles/snippets/axtest<CR>9jf)hi
+nnoremap ,wf :-1read ~/projects/dotfiles/snippets/axtest-wait-for<CR>j<TAB>
+nnoremap ,aid :-1read ~/projects/dotfiles/snippets/axtest-accessible-element-by-id<CR>f"li
 
 " ; as :
 nnoremap ; :

@@ -12,8 +12,6 @@
     if (window.accessibilityController) {
         window.jsTestIsAsync = true;
 
-        window.containerElement = accessibilityController.accessibleElementById("SOME_ID");
-
         setTimeout(async function() {
             await waitFor(() => {
 
