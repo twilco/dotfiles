@@ -15,6 +15,8 @@ command alias bpd breakpoint delete --force
 
 command alias bry breakpoint set -y %1
 
+command alias fi finish
+
 # Write all breakpoints to file on every stop so they can reloaded later.
 target stop-hook add breakpoint write lldb-breakpoints
 
