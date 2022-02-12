@@ -11,6 +11,7 @@ export RISCV_PATH="$HOME/usys/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_
 alias mdkir='mkdir'
 alias sg='sr google'
 alias reloadshell='exec $SHELL -l'
+alias cl='clear'
 
 # fzf
 # --------------------------------
