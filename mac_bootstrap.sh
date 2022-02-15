@@ -91,15 +91,6 @@ echo "Showing filename extensions by default"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 echo ""
-echo "Enabling tap-to-click"
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-echo ""
-echo "Disabling 'natural' scroll"
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-
-echo ""
 echo "Disabling smart quotes and smart dashes as they're annoying when typing code"
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
