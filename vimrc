@@ -247,10 +247,6 @@ set backspace=eol,start,indent
 " allow vim to wrap to next line when the end of the line has been reached
 set whichwrap+=<,>,h,l 
 
-"""" Clipboard
-" Sync defalut yank register with system clipboard
-set clipboard=unnamedplus
-
 """" Code formatting
 " do not wrap long lines - let them be displayed in very long horizontal lines
 set nowrap
