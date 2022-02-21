@@ -64,6 +64,7 @@ alias gm='git merge --no-ff'
 # Git show current branch
 alias gscb='git branch --show-current'
 alias grma='git rebase $(git_main_branch)'
+alias gb='git go'
 
 # Pushes branch upstream and then opens PR in browser.
 if [ "$(uname 2> /dev/null)" != "Linux" ]; then
@@ -158,3 +159,10 @@ function run-all-webkit-test-configurations {
 alias rwktall="run-all-webkit-test-configurations"
 alias rcl="Tools/Scripts/resolve-ChangeLogs"
 alias wkp="Tools/Scripts/webkit-patch"
+
+# Generally useful functions
+#---------------------------------
+# Create a new directory and enter it
+function mkd() {
+    mkdir -p "$@" && cd "$_";
+}
