@@ -161,5 +161,6 @@ echo "Bootstrapping complete"
 echo "NOTE: You will still need to configure MagicPrefs via the GUI."
 echo "NOTE: You will still need to install Meld, since that is what our .gitconfig uses as the difftool. http://meldmerge.org/"
 echo "NOTE: Review the entire output of this script to ensure no other action needs to be taken."
+echo "CONSIDER: Installing and configuring https://github.com/jgavris/rs-git-fsmonitor to improve git performance in large repositories."
 echo "Once you have taken all necessary actions, restart your computer to make the changes take effect."
 
