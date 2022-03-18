@@ -74,6 +74,12 @@ brew cask install ${CASKS[@]}
 echo ""
 echo "Configuring Mac settings..."
 
+echo "Display unexpectedly quit dialog for all processes run by the user (including background and commandline processes)"
+defaults write com.apple.CrashReporter DialogType developer
+
+echo "Use notification center for crash reporting"
+defaults write com.apple.CrashReporter UseUNC 1
+
 echo ""
 echo "Showing hidden files in Finder by default"
 defaults write com.apple.finder AppleShowAllFiles YES
