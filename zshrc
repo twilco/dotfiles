@@ -147,3 +147,4 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source /usr/local/bin/functions 
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
