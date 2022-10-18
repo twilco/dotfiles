@@ -134,15 +134,15 @@ alias tkall='tmux kill-server'
 
 # vim/neovim
 #---------------------------------
-alias v='nvim'
+alias v='vim'
 
 # webkit
 #---------------------------------
 alias trw='trap-webprocess'
 alias md="make debug"
 alias mr="make release"
-alias rwkt="run-webkit-tests --no-build --no-retry --no-show-results --time-out-ms=8000"
-alias rwkta="run-webkit-tests --no-build --no-retry --no-show-results --time-out-ms=8000 --accessibility-isolated-tree"
+alias rwkt="run-webkit-tests --no-build --no-retry --no-show-results --time-out-ms=6000"
+alias rwkta="run-webkit-tests --no-build --no-retry --no-show-results --time-out-ms=6000 --accessibility-isolated-tree"
 function run-all-webkit-test-configurations {
     echo "---------------- WebKit2 NO ISOLATED TREE ----------------"
     sleep 2
